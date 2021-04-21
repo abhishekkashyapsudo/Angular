@@ -1,0 +1,20 @@
+[
+    {
+        "name":"Abhishek",
+        "email":"abhishek.kashyap@nagarro.com",
+        "phoneNumber":"1111111111",
+        "username":"abhishek",
+        "password":"kashyap",
+        "address":"himachal",
+        "pin":"174033"
+    },
+    {
+        "name":"NAGP",
+        "email":"nagp@nagarro.com",
+        "phoneNumber":"2222222222",
+        "username":"nagp",
+        "password":"nagp",
+        "address":"Nagarro",
+        "pin":"110010"
+    }
+]
