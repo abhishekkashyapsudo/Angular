@@ -1,3 +1,4 @@
+import { noUndefined } from '@angular/compiler/src/util';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
@@ -21,13 +22,14 @@ export class HeaderComponent implements OnInit {
   logout(){
   
     localStorage.setItem('isLoggedIn','No');
+    localStorage.setItem('username',undefined);
     this.router.navigateByUrl("login");
     this.userService.logoutUser();
   }
 
   shouldBeDisplayed(){
-    if(this.userService.getLoggedUser() !== undefined)
-      this.user = this.userService.getLoggedUser().name;
+    if(localStorage.getItem("username") !== undefined)
+      this.user = localStorage.getItem("username");
     return localStorage.getItem('isLoggedIn') == 'Yes';
   }
 

@@ -31,7 +31,7 @@
                             'is-invalid':
                             (userForm.get('password').touched || userForm.get('password').dirty) &&
                             !userForm.get('password').valid
-                            }" />{{userForm.get('password').errors?.minlength}}
+                            }" />
                             <span class="invalid-feedback">
                                 <span *ngIf="userForm.get('password').errors?.required">
                                     Please enter your password.

@@ -17,7 +17,7 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>&nbsp;&nbsp;&nbsp;
       <span *ngIf="shouldBeDisplayed()">
-        <button class="btn btn-warning my-2 my-sm-0" type="button" (click)="logout()">Logout {{user}}</button> 
+        <button class="btn btn-warning my-2 my-sm-0" type="button" (click)="logout()">Logout {{user | uppercase}}</button> 
       </span>
 
       <span *ngIf="!shouldBeDisplayed()">

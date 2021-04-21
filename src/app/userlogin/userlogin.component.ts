@@ -30,6 +30,7 @@ export class UserloginComponent implements OnInit {
         this.error = "";
         this.router.navigateByUrl("main-page");
         localStorage.setItem("isLoggedIn","Yes")
+        localStorage.setItem("username",username);
       }
       else{
         console.log("Log in failed.");
