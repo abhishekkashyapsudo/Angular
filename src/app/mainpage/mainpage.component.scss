@@ -1,0 +1,9 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+.accordion-toggle[aria-expanded="true"]:before {
+    content: '<i class="fas fa-chevron-circle-up"></i>';
+}
+
+.accordion-toggle[aria-expanded="false"]:before {
+    content: '<i class="fas fa-chevron-circle-down"></i>';
+}
