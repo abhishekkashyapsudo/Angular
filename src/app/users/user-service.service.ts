@@ -8,23 +8,23 @@ export class UserService {
  
 
   private USER_BASE_URL = "assets/templates/"
-  private users: User[];
+  private static users: User[];
   private loggedUser: User ;
   constructor(private readonly http: HttpClient) { 
     const url = `${this.USER_BASE_URL}/users.json`;
     this.http.get<User[]>(url).subscribe(data =>
-      this.users = data
+      UserService.users = data
     )
   }
   
 
 
   getUsers() {
-    return this.users;
+    return UserService.users;
   }
 
   login(username: any, password: any) {
-    let filtered= this.users.filter((user: User) => user.username == username && user.password == password);
+    let filtered= UserService.users.filter((user: User) => user.username == username && user.password == password);
     if (filtered.length == 0){
       return undefined;
     }
@@ -36,6 +36,11 @@ export class UserService {
 
   logoutUser() {
     this.loggedUser = undefined;
+  }
+
+  addUser(user: User) {
+    UserService.users.push(user);
+    this.loggedUser = user;
   }
   getLoggedUser(){
     return this.loggedUser;

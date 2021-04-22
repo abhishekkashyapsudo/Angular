@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ModuleWithProviders } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
@@ -9,14 +9,14 @@ import { MustMatch } from '../helpers/must-match.validator';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
+
+
 export class RegisterComponent {
 
-
+  
   userForm: FormGroup;
-
-  constructor(public fb: FormBuilder, private userService: UserService, private readonly router: Router) { }
-
-
+  constructor(public fb: FormBuilder, private userService: UserService, private readonly router: Router) { 
+  }
 
   ngOnInit() {
     this.userForm = this.fb.group({
@@ -41,10 +41,15 @@ export class RegisterComponent {
     const email = this.userForm.value['email'];
     const address = this.userForm.value['address'];
     const pin = this.userForm.value['pin'];
-    console.log(name, email);
+    let user = new User(username, password, name, email, phoneNumber, address, pin);
+    this.userService.addUser(user);
+    this.userService.login(username, password);
+    this.router.navigateByUrl("main-page");
+    localStorage.setItem("isLoggedIn","Yes")
+    localStorage.setItem("username",username);
   }
+
   redirectToLogin() {
     this.router.navigateByUrl("login");
   }
-
 }

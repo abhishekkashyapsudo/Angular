@@ -1,1 +1,17 @@
-<p>mainpage works!</p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<accordion [isAnimated]="true">
+    
+    <accordion-group [isOpen]="false" #accGroup>
+        <span accordion-heading class="btn btn-light float-left">
+            dsfsdf
+        </span>
+        <span *ngIf = "accGroup.isOpen" accordion-heading class="btn btn-light float-right">
+            <i class='fa fa-caret-up'></i> 
+        </span>
+        <span *ngIf = "!accGroup.isOpen" accordion-heading class="btn btn-light float-right">
+            <i class='fa fa-caret-down'></i> 
+        </span>
+      </accordion-group>
+    
+  </accordion>
