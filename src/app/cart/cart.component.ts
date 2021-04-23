@@ -17,9 +17,6 @@ export class CartComponent implements OnInit {
   constructor(private readonly productService: ProductService) {
     this._cart = new Map<Product, number>();
     this.title = "Welcome to your Shopping cart, " + localStorage.getItem('username');
-
-
-
     console.log(this._cart);
   }
 

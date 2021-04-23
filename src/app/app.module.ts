@@ -16,6 +16,8 @@ import { UserService } from './users/user-service.service';
 import { ProductService } from './products/product.service';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { CartComponent } from './cart/cart.component';
     MainpageComponent,
     RegisterComponent,
     ProductDetailComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -34,13 +37,15 @@ import { CartComponent } from './cart/cart.component';
     ReactiveFormsModule,
     HttpClientModule,
     AccordionModule.forRoot(),
+    RouterModule.forRoot([]),
     BrowserAnimationsModule,
     FontAwesomeModule
 
   ],
   providers: [
     UserService,
-    ProductService
+    ProductService,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

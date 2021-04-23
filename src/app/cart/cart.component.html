@@ -2,7 +2,7 @@
     <h1 class="projTitle">{{title | uppercase}}</h1>
     <div class="heading cf">
         <h1>My Cart</h1>
-        <a [routerLink]="['products']" class="continue">Continue Shopping</a>
+        <a [routerLink]="['/products']" class="continue">Continue Shopping</a>
     </div>
     <div class="cart">
 
@@ -56,6 +56,7 @@
         <div class="totalRow"><span class="label">Tax</span><span class="value">{{tax | currency:"INR"}}</span></div>
         <div class="totalRow final"><span class="label">Total</span><span class="value">{{gtotal |
                 currency:"INR"}}</span></div>
-        <div class="totalRow"><a href="#" class="btn continue">Checkout</a></div>
+        <div class="totalRow"><a [routerLink]="['/checkout']" class="btn continue">Checkout</a></div>
+
     </div>
 </div>
