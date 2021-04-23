@@ -29,10 +29,10 @@ export class CheckoutComponent implements OnInit {
   
   constructor(public fb: FormBuilder, private userService: UserService, private productService: ProductService,private readonly router: Router) { 
     this.cart = new Map<Product, number>();
-    this.title =  localStorage.getItem('username').toUpperCase() +" , Checkout and pay ";
+    if(localStorage.getItem('username'))
+      this.title =  localStorage.getItem('username').toUpperCase() +" , Checkout and pay ";
     this.success = "";
     this.initCart();    
-    
   }
 
   ngOnInit() {

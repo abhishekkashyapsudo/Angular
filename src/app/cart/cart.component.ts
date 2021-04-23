@@ -8,7 +8,7 @@ import { ProductService } from '../products/product.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  public title: string;
+  public title: string = "";
   public total: number;
   public shipping: number;
   public tax: number;
