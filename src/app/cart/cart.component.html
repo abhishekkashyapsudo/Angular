@@ -1,0 +1,61 @@
+<div>
+    <h1 class="projTitle">{{title | uppercase}}</h1>
+    <div class="heading cf">
+        <h1>My Cart</h1>
+        <a [routerLink]="['products']" class="continue">Continue Shopping</a>
+    </div>
+    <div class="cart">
+
+        <ul class="cartWrap">
+            <li *ngFor="let p of cart | keyvalue" class="items ">
+                <div class="infoWrap">
+                    <div class="cartSection">
+                        <img src="{{p.key.image}}" alt="" class="itemImg" />
+                        <p class="itemNumber">#{{p.key.id}}</p>
+                        <h3></h3>
+
+                        <p> <input type="button" value="-" (click)="decrease(p.key.id)" class="minus">&nbsp;&nbsp;&nbsp;
+                            {{p.value}}&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="+" (click)="increase(p.key.id)"class="plus" [disabled] = "p.value==p.key.quantity"> x {{p.key.price | currency:"INR"}}</p>
+                        
+                        <span class="invalid-feedback">
+                            <span >
+                                Please enter your username.
+                            </span>
+                            
+                        </span>
+                        <p class="stockStatus"> In Stock</p>
+                        
+                    </div>
+                    
+
+                    <div class="prodTotal cartSection">
+                        <p>{{p.key.price * p.value | currency:"INR"}}</p>
+                    </div>
+                    <div class="cartSection removeWrap">
+                        <a [routerLink]="" (click) = "removeProduct(p.key)" class="remove">x</a>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+
+
+    <div class="subtotal cf">
+        <br />
+        <br />
+        <br />
+        <div class="totalRow"><span class="label">Subtotal</span><span class="value">{{total | currency:"INR"}}</span>
+        </div>
+
+        <div class="totalRow"><span class="label">Shipping</span><span class="value">{{shipping |
+                currency:"INR"}}</span></div>
+
+        <div class="totalRow"><span class="label">Tax</span><span class="value">{{tax | currency:"INR"}}</span></div>
+        <div class="totalRow final"><span class="label">Total</span><span class="value">{{gtotal |
+                currency:"INR"}}</span></div>
+        <div class="totalRow"><a href="#" class="btn continue">Checkout</a></div>
+    </div>
+</div>
