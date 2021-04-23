@@ -12,6 +12,9 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http'
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { UserService } from './users/user-service.service';
+import { ProductService } from './products/product.service';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     FooterComponent,
     UserloginComponent,
     MainpageComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,10 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     FontAwesomeModule
 
   ],
-  providers: [],
+  providers: [
+    UserService,
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

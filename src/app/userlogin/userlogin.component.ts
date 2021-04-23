@@ -28,7 +28,7 @@ export class UserloginComponent implements OnInit {
       if(this.loggedUser !== undefined){
         console.log("Logged in successfully");
         this.error = "";
-        this.router.navigateByUrl("main-page");
+        this.router.navigateByUrl("products");
         localStorage.setItem("isLoggedIn","Yes")
         localStorage.setItem("username",username);
       }

@@ -4,6 +4,7 @@ import { User } from '../models/user'
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
  
 
@@ -12,6 +13,7 @@ export class UserService {
   private loggedUser: User ;
   constructor(private readonly http: HttpClient) { 
     const url = `${this.USER_BASE_URL}/users.json`;
+    const url1 = `${this.USER_BASE_URL}/products.json`;
     this.http.get<User[]>(url).subscribe(data =>
       UserService.users = data
     )

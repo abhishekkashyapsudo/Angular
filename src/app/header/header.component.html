@@ -7,15 +7,14 @@
       <div class="navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a [routerLink] ="['/main-page']" routerLinkActive='active' class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+            <a [routerLink] ="['/products']" routerLinkActive='active' class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
           </li>
           
         </ul>
       </div>  
     <form class="form-inline">
         
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>&nbsp;&nbsp;&nbsp;
+      
       <span *ngIf="shouldBeDisplayed()">
         <button class="btn btn-warning my-2 my-sm-0" type="button" (click)="logout()">Logout {{user | uppercase}}</button> 
       </span>

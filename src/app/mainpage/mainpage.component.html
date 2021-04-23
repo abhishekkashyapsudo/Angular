@@ -1,17 +1,52 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+<br/>
+<h2 style="text-align:center;">{{title}}</h2>
+<br/>
+<div class="input-group col-md-4">
+  <input class="form-control py-2 border-right-0 border" [(ngModel)]="search" id="idTxt" type="text" placeholder="Filter name: "/>
+  <span class="input-group-append">
+    <button class="btn btn-outline-secondary border-left-0 border" type="button">
+          <i class="fa fa-search"></i>
+    </button>
+  </span>
+  &nbsp;&nbsp;
+</div>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filtered by: {{search}}
+<br/><br/>
 <accordion [isAnimated]="true">
-    
-    <accordion-group [isOpen]="false" #accGroup>
-        <span accordion-heading class="btn btn-light float-left">
-            dsfsdf
-        </span>
-        <span *ngIf = "accGroup.isOpen" accordion-heading class="btn btn-light float-right">
-            <i class='fa fa-caret-up'></i> 
-        </span>
-        <span *ngIf = "!accGroup.isOpen" accordion-heading class="btn btn-light float-right">
-            <i class='fa fa-caret-down'></i> 
-        </span>
-      </accordion-group>
-    
-  </accordion>
+  <span *ngFor="let p of map | keyvalue">
+    <accordion-group [isOpen]="true" #{{p.key}}>
+      <span accordion-heading class="btn btn-light float-left">
+        {{p.key}}
+      </span>
+      <span *ngIf="p.key.isOpen" accordion-heading class="btn btn-light float-right">
+        <i class='fa fa-caret-up'></i>
+      </span>
+      <span *ngIf="!p.key.isOpen" accordion-heading class="btn btn-light float-right">
+        <i class='fa fa-caret-down'></i>
+      </span>
+      <div class="container">
+        <div class="grayBg">
+          <div class="row">
+            
+              <div *ngFor="let product of p.value" class="col-xs-12 col-sm-4">
+                <div class="productWrp">
+                  <figure><img class="img-responsive" width="100" height="200" src="{{product.image}}">
+                  </figure>
+                  <figcaption>
+
+                    <h4>{{product.name}}</h4>
+                    <b><p>{{product.price | currency:'INR'}}</p></b>
+                    <a [routerLink]="" (click) = "viewProduct(product.id)" class="btn btn-primary">View Detail</a>
+                  </figcaption>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </accordion-group>
+
+  </span>
+
+</accordion>

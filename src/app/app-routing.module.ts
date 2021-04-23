@@ -8,12 +8,20 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './layout/guards/auth.guard';
 import { LoggedInGuard } from './layout/guards/logged-in.guard';
+import { ProductsResolver } from './layout/resolver/products.resolver';
+import { ProductResolver } from './layout/resolver/product.resolver';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 
 const routes: Routes = [
   { path: '', component: UserloginComponent, canActivate:[LoggedInGuard ]},
   { path: 'login', component: UserloginComponent,canActivate:[LoggedInGuard ] },
   { path: 'register', component: RegisterComponent,canActivate:[LoggedInGuard ] },
-  { path: 'main-page', component: MainpageComponent},
+  { path: 'products', component: MainpageComponent, resolve:{
+    products: ProductsResolver
+  }},
+  { path: 'products/:productId', component: ProductDetailComponent, resolve:{
+    product: ProductResolver
+  }},
   { path: '**', component: UserloginComponent, canActivate:[LoggedInGuard, AuthGuard ]},
 ];
 

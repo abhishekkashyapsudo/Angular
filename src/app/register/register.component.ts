@@ -44,7 +44,7 @@ export class RegisterComponent {
     let user = new User(username, password, name, email, phoneNumber, address, pin);
     this.userService.addUser(user);
     this.userService.login(username, password);
-    this.router.navigateByUrl("main-page");
+    this.router.navigateByUrl("products");
     localStorage.setItem("isLoggedIn","Yes")
     localStorage.setItem("username",username);
   }

@@ -13,7 +13,7 @@ export class LoggedInGuard implements CanActivate {
     state: RouterStateSnapshot): boolean {
 
       if(localStorage.getItem('isLoggedIn')==='Yes'){
-        this.router.navigate(['/main-page']);
+        this.router.navigate(['/products']);
         return false;
       }
       return true;
