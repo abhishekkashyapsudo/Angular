@@ -26,7 +26,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl("login");
     this.userService.logoutUser();
   }
-
+  cartPage(){
+    this.router.navigateByUrl("cartpage");
+  }
   shouldBeDisplayed(){
     if(localStorage.getItem("username") !== undefined)
       this.user = localStorage.getItem("username");

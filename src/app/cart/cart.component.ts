@@ -17,7 +17,22 @@ export class CartComponent implements OnInit {
   constructor(private readonly productService: ProductService) {
     this._cart = new Map<Product, number>();
     this.title = "Welcome to your Shopping cart, " + localStorage.getItem('username');
-    console.log(this._cart);
+  }
+
+  initCart() {
+    let map = this.productService.getCart();
+    this.cart = new Map<Product, number>();
+    this.shipping = map.size * 50;
+    this.total = 0;
+    this.gtotal = this.shipping;
+    map.forEach((value: number, key: string) => {
+      let product = this.productService.getProductWithId(key);
+      this.total += product.price * value;
+      this.cart.set(product, value);
+    });
+    this.tax = this.total * 0.18;
+    this.gtotal += this.tax + this.total;
+    this.cart = this._cart;
   }
 
   get cart() {
@@ -49,21 +64,7 @@ export class CartComponent implements OnInit {
     this.initCart();
   }
 
-  initCart() {
-    let map = this.productService.getCart();
-    this.cart = new Map<Product, number>();
-    this.shipping = map.size * 50;
-    this.total = 0;
-    this.gtotal = this.shipping;
-    map.forEach((value: number, key: string) => {
-      let product = this.productService.getProductWithId(key);
-      this.total += product.price * value;
-      this.cart.set(product, value);
-    });
-    this.tax = this.total * 0.18;
-    this.gtotal += this.tax + this.total;
-    this.cart = this._cart;
-  }
+  
 
 }
 

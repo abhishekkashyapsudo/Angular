@@ -31,8 +31,11 @@
             
               <div *ngFor="let product of p.value" class="col-xs-12 col-sm-4">
                 <div class="productWrp">
-                  <figure><img class="img-responsive" width="100" height="200" src="{{product.image}}">
+                  <a [routerLink]="" (click) = "viewProduct(product.id)" >
+                  <figure><img class="img-responsive" width="100" height="175" src="{{product.image}}">
+                    
                   </figure>
+                  </a>
                   <figcaption>
 
                     <h4>{{product.name}}</h4>

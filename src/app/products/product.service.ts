@@ -11,6 +11,7 @@ import { map } from 'rxjs/operators';
 
 export class ProductService {
   
+  
   getProductWithId(key: string) {
     return ProductService.products.filter(p => p.id == key)[0];
   }
@@ -40,6 +41,10 @@ export class ProductService {
     ProductService.cart.set(userId, crt);
   }
 
+  placeOrder() {
+    let userId = localStorage.getItem("username");
+    ProductService.cart.set(userId, new Map<string, number>());
+   }
 
   removeProduct(id: string) {
     let userId = localStorage.getItem("username");

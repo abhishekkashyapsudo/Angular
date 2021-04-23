@@ -1,1 +1,185 @@
-<p>checkout works!</p>
+<div style="margin:5%">
+    <hr />
+    <h2 style="text-align:center">{{title}} {{gtotal | currency:"INR"}}</h2>
+    <hr />
+    <form style="padding: 5%;border: 1px solid black;" novalidate [formGroup]="userForm">
+        <div class="form-row">
+            <div class="form-group col-md-1">
+                <label for="inputEmail4">Salutation</label>
+                <select id="salutation" class="form-control" formControlName="salutation">
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Miss.">Miss.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Dr.">Dr.</option>
+                    <option value="Prof.">Prof.</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="name">Name</label>
+                <input class="form-control" id="name" type="name" placeholder="Enter Name *" formControlName="name"
+                    [ngClass]="{
+                                    'is-invalid':
+                                    (userForm.get('name').touched || userForm.get('name').dirty) &&
+                                    !userForm.get('name').valid
+                                    }" />
+                <span class="invalid-feedback">
+                    <span *ngIf="userForm.get('name').errors?.required">
+                        Please enter your name.
+                    </span>
+                    <span *ngIf="userForm.get('name').errors?.minlength">
+                        Name must be at least 5 characters long.
+                    </span>
+                </span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Phone</label>
+                <input class="form-control" id="phone" type="phone" placeholder="Enter Phone Number *"
+                    formControlName="phone" [ngClass]="{
+                                'is-invalid':
+                                (userForm.get('phone').touched || userForm.get('phone').dirty) &&
+                                !userForm.get('phone').valid
+                                }" />
+                <span class="invalid-feedback">
+                    <span *ngIf="userForm.get('phone').errors?.required">
+                        Please enter your phone number.
+                    </span>
+                    <span *ngIf="userForm.get('phone').errors?.pattern">
+                        Phone number must be numeric.
+                    </span>
+                    <span *ngIf="userForm.get('phone').errors?.minlength || userForm.get('phone').errors?.maxlength">
+                        Phone number must be 10 digits long.
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input class="form-control" id="address1" type="name" placeholder="Enter Address 1*"
+                formControlName="address1" [ngClass]="{
+        'is-invalid':
+        (userForm.get('address1').touched || userForm.get('address1').dirty) &&
+        !userForm.get('address1').valid
+        }" />
+            <span class="invalid-feedback">
+                <span *ngIf="userForm.get('address1').errors?.required">
+                    Please enter your Address.
+                </span>
+                <span *ngIf="userForm.get('address1').errors?.minlength">
+                    Address must be at least 5 characters long.
+                </span>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Address 2</label>
+            <input class="form-control" id="address2" type="name" placeholder="Enter Address 2*"
+                formControlName="address2" [ngClass]="{
+        'is-invalid':
+        (userForm.get('address2').touched || userForm.get('address2').dirty) &&
+        !userForm.get('address2').valid
+        }" />
+            <span class="invalid-feedback">
+                <span *ngIf="userForm.get('address2').errors?.required">
+                    Please enter your Address.
+                </span>
+                <span *ngIf="userForm.get('address2').errors?.minlength">
+                    Address must be at least 5 characters long.
+                </span>
+            </span>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input class="form-control" id="city" type="text" placeholder="City *" formControlName="city" [ngClass]="{
+            'is-invalid':
+            (userForm.get('city').touched || userForm.get('city').dirty) &&
+            !userForm.get('city').valid
+            }" />
+                <span class="invalid-feedback">
+                    <span *ngIf="userForm.get('city').errors?.required">
+                        Please enter your City.
+                    </span>
+                    <span *ngIf="userForm.get('city').errors?.minlength">
+                        City must be at least 3 characters long.
+                    </span>
+                </span>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="state" class="form-control" formControlName="state">
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">PIN</label>
+                <input class="form-control" id="pin" type="pin" placeholder="Enter PIN *" formControlName="pin"
+                    [ngClass]="{
+                                'is-invalid':
+                                (userForm.get('pin').touched || userForm.get('pin').dirty) &&
+                                !userForm.get('pin').valid
+                                }" />
+                <span class="invalid-feedback">
+                    <span *ngIf="userForm.get('pin').errors?.required">
+                        Please enter your PIN.
+                    </span>
+                    <span *ngIf="userForm.get('pin').errors?.pattern">
+                        PIN must be numeric.
+                    </span>
+                    <span *ngIf="userForm.get('pin').errors?.minlength || userForm.get('pin').errors?.maxlength">
+                        PIN must be 6 digits long.
+                    </span>
+
+                </span>
+            </div>
+        </div>
+        <button  class="btn btn-primary"
+            (click)="gotoProducts()">Products Page</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary"
+            (click)="placeOrder()">Checkout</button>
+        <br/>
+        <br/>
+            <h5>{{success}}</h5>
+            <h5>{{name}}</h5>
+            <h5>{{address}}</h5>
+            <h5>{{state}}</h5>
+            <h5>{{phone}}</h5>
+
+    </form>
+
+</div>

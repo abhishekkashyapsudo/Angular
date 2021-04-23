@@ -29,7 +29,7 @@ export class MainpageComponent implements OnInit {
     if(this.search){
       this.map = new Map<string, Product[]>();
 
-      this.products.filter(a => a.name.toLowerCase().indexOf(this.search) != -1).forEach(product => {
+      this.products.filter(a => a.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1).forEach(product => {
         
         if (this.map.has(product.category)) {
           let value = this.map.get(product.category);

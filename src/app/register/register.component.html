@@ -15,7 +15,7 @@
                             <div class="col-md-6">
 
                                 <div class="form-group">
-                                    <input class="form-control" id="txtName" type="text" placeholder="Enter Name *"
+                                    <input class="form-control" id="txtName" type="text" placeholder="Enter Username *"
                                         formControlName="username" [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('username').touched || userForm.get('username').dirty) &&
@@ -159,7 +159,7 @@
                                 </span>                                </div>
                                 <button type="submit" (click)="redirectToLogin()" class="btnRegister"
                                     value="Cancel">Cancel</button>
-                                <input type="submit" class="btnRegister" value="Register" />
+                                <input [disabled]="!userForm.valid" type="submit" class="btnRegister" value="Register" />
                             </div>
                         </div>
                     </div>

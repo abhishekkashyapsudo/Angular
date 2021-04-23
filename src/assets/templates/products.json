@@ -1,5 +1,191 @@
 [
     {
+        "id":"L1000",
+        "name":"HP 15 15.6-inch HD Laptop",
+        "image":"assets/laptops/hp15.jpg",
+        "price":23990.00,
+        "description":[
+            "Processor: AMD 3020e (Base Clock Speed 1.2 GHz, Up to 2.6GHz Max Boost Clock, 4 MB L3 cache, 2 cores)",
+            "Operating System: Windows 10 Home | In the box: Laptop with included battery, charger",
+            "Display: 15.6-Inch HD Display, 220 nits, 45% NTSC",
+            "Memory & Storage: 4 GB DDR4 SDRAM (1 x 4 GB) | 1TB HDD",
+            "Graphics: AMD Radeon Graphics",
+            "Camera & Microphone: HP TrueVision HD camera with integrated dual array digital microphone",
+            "Ports: 1 SuperSpeed USB 3.1 Type-C (5Gbps), 2 SuperSpeed USB Type-A (5Gbps), 1 HDMI 1.4b, 1 RJ-45, 1 SD card reader | Without CD-Drive"
+        ],
+        "tags":["laptop","computer","hp","lappy"],
+        "category":"Laptops",
+        "quantity":5,
+        "brand":"HP",
+        "rating":2,
+        "replacement":"4 day replacement Warranty"
+    },
+    {
+        "id":"L1001",
+        "name":"Dell Inspiron 3502",
+        "image":"assets/laptops/dell3502.jpg",
+        "price":27390.00,
+        "description":[
+            "Processor: Intel Pentium Silver N5030 Processor (4MB Cache, up to 3.1 GHz)",
+            "Memory & Storage:4GB RAM | 256GB M.2 PCIe NVMe Solid State Drive",
+            "Display:15.6-inch HD Anti-glare LED Backlight Narrow Border WVA Display" ,
+            "Graphics: Intel UHD Graphics with shared graphics memory",
+            "Operating System & Software: Windows 10 Home | Microsoft Office Home and Student 2019",
+            "I/O ports: USB 3.2 Gen 1 (x2), USB2.0 (x1), HDMI 1.4(x1),One SD-card slot ,RJ45 - 10/100Mbps"
+        ],
+        "tags":["laptop","computer","dell","lappy"],
+        "category":"Laptops",
+        "quantity":7,
+        "brand":"DELL",
+        "rating":4,
+        "replacement":"7 day replacement Warranty"
+    },
+    {
+        "id":"L1002",
+        "name":"Mi Notebook 14",
+        "image":"assets/laptops/mi14.jpg",
+        "price":37999.00,
+        "description":[
+            "Processor : 10th Gen Intel Core i3-10110U processor, 2.10 GHz base speed, 4.10 GHz max speed, 2 Cores, 4 threads",
+            "Operating system : Windows 10 Home operating system",
+            "Display: 14-Inch (1920X 1080 )Full HD Anti-Glare Screen, Intel UHD Graphics",
+            "Memory : 8GB DDR4-2666MHz RAM and  Storage: 256 GB SSD",
+            "Design and battery: Robust metal body | Thin and light Laptop| Laptop weight 1.5kg | Battery Life: Up to 10 hours | 720p Webcam",
+            "Audio : Stereo Speakers + DTS Audio Processing",
+            "Pre-installed software : Office 365 – one month trial subscription"
+        ],
+        "tags":["laptop","computer","mi","lappy"],
+        "category":"Laptops",
+        "quantity":2,
+        "brand":"MI",
+        "rating":4,
+        "replacement":"7 day replacement Warranty"
+    },
+    {
+        "id":"L1003",
+        "name":"AVITA Essential NE14A2INC433-MB",
+        "image":"assets/laptops/avita.jpg",
+        "price":17990.00,
+        "description":[
+            "Processor: Celeron N4000 processor, 1.10 GHz base processor speed, 2.60 GHz Max speed",
+            "Operating System:Pre-loaded Windows 10 Home in S Mode | In the box Laptop, AC Adapter, User Guide, Manuals",
+            "Display: 14-inch screen (1920X1080) FHD display | Connectivity: 802.11 b/g/n/ac Wi-Fi and Bluetooth 4.0",
+            "Memory & Storage: 4 GB DDR4 RAM with intel integrated UHD Graphics | Storage: 128 GB SSD",
+            "Design and battery: Thin and light Laptop| Laptop weight 1.37kg |Alluminum Body| Battery Life: Upto 6 Hours as per MobileMark",
+            "Ports and Optical Drive: USB 3.0 Type A x 2 , Full Size HDMI x 1, Micro SD Card Reader, |No Optical Drive",
+            "This genuine Avita Laptop comes with 18+6 months onsite domestic warranty from Avita covering manufacturing defects and not covering physical damage. For more details, see Warranty section" 
+       ],
+        "tags":["laptop","computer","avita","lappy"],
+        "category":"Laptops",
+        "quantity":2,
+        "brand":"AVITA",
+        "rating":4,
+        "replacement":"7 day replacement Warranty"
+    },
+    {
+        "id":"L1004",
+        "name":"HP Chromebook 14a-na0003TU",
+        "image":"assets/laptops/chromebook.jpg",
+        "price":24990.00,
+        "description":[
+            "GOOGLE ASSISTANT: Voice-Enabled Google Assistant built-in, work faster and smarter without lifting a finger or switching screens. Ask questions, set reminders, play videos, control your home, and more. Make Google do it.",
+            "BOOTS IN SECONDS: Powered by Chrome OS with automatic software updates so youâll always have the latest virus protection. It starts up in less than 10 seconds, stays fast throughout the day, and wonât slow down over time",
+            "PROCESSOR: Intel Celeron N4020 (1.1 GHz base frequency, up to 2.8 GHz burst frequency, 4 MB L2 cache, 2 cores)",
+            "APPS: Access to favorite apps from Google Play like Google Drive, Gmail, YouTube, Evernote, Slack, Infinite Painter, Lightroom, Whatsapp, MS Office and many more",
+            "MEMORY & STORAGE: 4 GB DDR4-2400 SDRAM | HARD DRIVE: 64 GB eMMC | Expandable up to 256 GB | 100 GB Google Drive storage" 
+       ],
+        "tags":["laptop","computer","chromebook","hp","lappy"],
+        "category":"Laptops",
+        "quantity":9,
+        "brand":"HP",
+        "rating":3,
+        "replacement":"7 day replacement Warranty"
+    },
+    {
+        "id":"L1005",
+        "name":"Lenovo Ideapad Slim 3",
+        "image":"assets/laptops/lenovo.jpg",
+        "price":27990.00,
+        "description":[
+            "Processor: AMD Athlon Silver 3050U | Speed: 2.3 GHz (Base) - 3.2 GHz (Max) | 2 Cores | 4MB Cache",
+            "OS: Pre-Loaded Windows 10 Home with Lifetime Validity",
+            "Pre-Installed: MS Office Home and Student 2019",
+            "Memory and Storage: 4GB RAM DDR4, Upgradable up to 12GB | 1TB HDD",
+            "Display: 15.6 inch HD (1366x768) | Anti-Glare",
+            "Design: 1.99 cm Thin and 1.85 kg Light | Narrow Bezel | Battery Life: 5 Hours | Rapid Charge (Up to 80% in 1 Hour)",
+            "Camera (Built-in): 0.3 MP with Privacy Shutter | Fixed Focus | Integrated Dual Array Microphone"
+       ],
+        "tags":["laptop","computer","lenovo","lappy"],
+        "category":"Laptops",
+        "quantity":4,
+        "brand":"LENOVO",
+        "rating":4,
+        "replacement":"7 day replacement Warranty"
+    },
+    {
+        "id":"L1006",
+        "name":"Lenovo Yoga 6 AMD Ryzen",
+        "image":"assets/laptops/yoga6.jpg",
+        "price":79990.00,
+        "description":[
+            "Processor: 4th Gen AMD Ryzen 7 4700U | Speed: 2.0 GHz (Base) - 4.1 GHz (Max) | 8 Cores | 4MB L2 & 8MB L3 Cache",
+            "OS: Pre-Loaded Windows 10 Home with Lifetime Validity",
+            "Pre-Installed: MS Office Home and Student 2019",
+            "Memory and Storage: 16GB RAM DDR4-3200, not upgradable | 512 GB SSD",
+            "Graphics: Integrated AMD Radeon Graphics",
+            "Display: 13.3 Full HD (1920x1080) | Brightness: 300 nits | IPS Technology | 72% NTSC",
+            "Design: Touchscreen | 1.71 cm Thin and 1.32 kg Light | Fabric Surface | Backlit Keyboard | Fingerprint Reader"
+       ],
+        "tags":["laptop","computer","lenovo","touchscreen","lappy"],
+        "category":"Laptops",
+        "quantity":2,
+        "brand":"LENOVO",
+        "rating":4,
+        "replacement":"7 day replacement Warranty"
+    },
+    {
+        "id":"L1008",
+        "name":"HP Pavilion x360 ",
+        "image":"assets/laptops/hppav.jpg",
+        "price":79990.00,
+        "description":[
+            "Processor: 11th Gen Intel Core i5-1135G7 (up to 4.2 GHz with Intel Turbo Boost Technology, 8 MB L3 cache, 4 cores)",
+            "Operating System & Preinstalled Software: Windows 10 Home | Microsoft Office Home & Student 2019 | In the box: Laptop with included battery, charger",
+            "Display: 14-Inch FHD (1920 x 1080), touch-enabled, IPS, edge-to-edge glass, micro-edge, 250 nits, 45% NTSC | Without Inking Pen",
+            "Memory & Storage: 8 GB DDR4-3200 SDRAM (2 x 4 GB), expandable upto 16 GB | 512GB PCIe NVMe M.2 SSD",
+            "Graphics: Intel Iris Xᵉ Graphics",
+            "Design & Battery: Touchscreen and Convertible Laptop | Laptop weight: 1.58 kg | Average battery life = 7 hours, 3-cell, 41 Wh Li-ion Fast Charge Battery",
+            "Camera & Microphone: HP TrueVision HD camera with integrated dual array digital microphone"
+       ],
+        "tags":["laptop","computer","hp","pavilion","touchscreen","lappy"],
+        "category":"Laptops",
+        "quantity":4,
+        "brand":"LENOVO",
+        "rating":5,
+        "replacement":"7 day replacement Warranty"
+    },
+    {
+        "id":"L1009",
+        "name":"Apple MacBook Pro",
+        "image":"assets/laptops/pro.jpg",
+        "price":116790.00,
+        "description":[
+            "Apple-designed M1 chip for a giant leap in CPU, GPU, and machine learning performance",
+            "Get more done with up to 20 hours of battery life, the longest ever in a Mac",
+            "8-core CPU delivers up to 2.8x faster performance to fly through workflows quicker than ever",
+            "8-core GPU with up to 5x faster graphics for graphics-intensive apps and games",
+            "16-core Neural Engine for advanced machine learning",
+            "8GB of unified memory so everything you do is fast and fluid",
+            "Superfast SSD storage launches apps and opens files in an instant"
+       ],
+        "tags":["laptop","computer","apple","touchscreen","lappy"],
+        "category":"Laptops",
+        "quantity":4,
+        "brand":"APPLE",
+        "rating":5,
+        "replacement":"7 day replacement Warranty"
+    },
+    {
         "id":"M1000",
         "name":"New Apple I Phone 11",
         "image":"assets/phones/appleiphone11.webp",
@@ -142,5 +328,121 @@
         "brand":"Samsung",
         "rating":5,
         "replacement":"No replacement Warranty"
+    },
+    {
+        "id":"P1000",
+        "name":"Retractable Extension Cord Reel",
+        "image":"assets/electronics/iron.webp",
+        "price":20588,
+        "description":[
+            "Length : 30 ft",
+            "Colour: yellow",
+            "Retractable Extension Cord Reel"
+        ],
+        "tags":["electronics","accessory","extension"],
+        "category":"Power Accessories",
+        "quantity":2,
+        "brand":"Iron Forge Cable",
+        "rating":4,
+        "replacement":"7 day replacement Warranty"
+    },
+    {
+        "id":"P1001",
+        "name":"Manual Displacement Slide",
+        "image":"assets/electronics/side.webp",
+        "price":112729,
+        "description":[
+            "Suitable for optical equipment, semiconductor manufacturing equipment, microscopes, photographic equipment, printing presses, etc.",
+            "The crossed roller type movement guide method has low rolling friction and stable performance.",
+            "The movement of one rotation is only 0.5mm, which can fine-tune the movement distance of the platform.",
+            "The sliding table is made of aluminum alloy, which is silent when working, scratch-resistant and friction-resistant.",
+            "The slide rail is controlled by the gear rotating handle, which has smoother operation and higher accuracy.",
+            "Warranty not applicable for this product"
+        ],
+        "tags":["electronics","accessory","slider"],
+        "category":"Power Accessories",
+        "quantity":2,
+        "brand":"Acogedor",
+        "rating":1,
+        "replacement":"No replacement Warranty"
+    },
+    {
+        "id":"P1002",
+        "name":"Variable Frequency Drive Converter",
+        "image":"assets/electronics/freq.webp",
+        "price":43559,
+        "description":[
+            "Super large all-aluminum base fan heater combined with imported powerful fan, super wind power, super fast heat dissipation.",
+            "Used in spindle motors, lathes, milling, pumps, treadmills, conveyors, winding machines, mixers, extruders, splitters, compressors, ventilators, elevators, centrifuges and other machines.",
+            "This frequency inverter has a humanized keyboard design, easy to operate and clear display.",
+            "With the common functions of current mainstream inverters, with comprehensive functions and suitable for many scenarios.",
+            "Made of industrial flame‑retardant ABS material, heat‑resistant, flame‑retardant, impact‑resistant and safe.",
+            "Warranty not applicable for this product"
+        ],
+        "tags":["electronics","accessory","frequency","convertor"],
+        "category":"Power Accessories",
+        "quantity":6,
+        "brand":"FILR",
+        "rating":3,
+        "replacement":"No replacement Warranty"
+    },
+    {
+        "id":"P1003",
+        "name":"PX4 Flight Controller",
+        "image":"assets/electronics/flight.webp",
+        "price":43559,
+        "description":[
+            "Main FMU Processor: STM32F76 (32 bit M7, 216 MHz Processor running RTOS, more computing power and 2X the RAM than previous versions) Abundant connectivity options for additional peripherals (UART, I2C, CAN)",
+            "Redundant power supply inputs and automatic fail over External safety button for easy motor activation",
+            "New sensors with higher temperature stability Multicolor LED indicator",
+            "Integrated vibrations isolation micro card for long-time high-rate logging",
+            "16 PWM outputs Increased ease-of-use: pre-installed with most recent PX4 (v1.8)"
+        ],
+        "tags":["electronics","accessory","flight","controller"],
+        "category":"Power Accessories",
+        "quantity":2,
+        "brand":"GENERIC",
+        "rating":3,
+        "replacement":"No replacement Warranty"
+    },
+    {
+        "id":"P1004",
+        "name":"Anti Zap Protector",
+        "image":"assets/electronics/zap.webp",
+        "price":23985,
+        "description":[
+            "The surge suppressor can protect the vehicle electrical systems to avoid damage from voltage spikes while starting welding or jumping.",
+            "Suitable for 12/24V systems. Polarity protected-reverse connection warning.",
+            "Designed for across battery terminals installation to absorb unnecessary power surges.",
+            "LED Lights: Green light on means protection on, red light on means protection off. In conditions of no protection, the warning alarm will sound too.",
+            "Please feel free to contact us if you have any questions, we will try our best to meet your satisfaction.",
+            "Warranty not applicable for this product"
+        ],
+        "tags":["electronics","accessory","zap","protector"],
+        "category":"Power Accessories",
+        "quantity":5,
+        "brand":"LAYFUZ",
+        "rating":4,
+        "replacement":"No replacement Warranty"
+    },
+    {
+        "id":"P1005",
+        "name":"Windsurfing Mast Extension Stick",
+        "image":"assets/electronics/wind.webp",
+        "price":11111,
+        "description":[
+            "Universal for SDM standard mast.",
+            "Made of quality aluminium alloy material, with rod and base mount adapter, and has high strength 1.8m nylon rope, good performance.",
+            "Can be extanded 0-35cm, convenient and practical.",
+            "High strength, sturdy and durable, corrosion resistance, durable.",
+            "Wonderful accessory for windsurfing, sailboard and surfing water sports."
+        ],
+        "tags":["electronics","accessory","windsurfing","stick"],
+        "category":"Power Accessories",
+        "quantity":2,
+        "brand":"AMONIDA",
+        "rating":5,
+        "replacement":"No replacement Warranty"
     }
+    
 ]
