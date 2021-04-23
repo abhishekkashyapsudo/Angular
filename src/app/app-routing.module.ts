@@ -11,11 +11,13 @@ import { LoggedInGuard } from './layout/guards/logged-in.guard';
 import { ProductsResolver } from './layout/resolver/products.resolver';
 import { ProductResolver } from './layout/resolver/product.resolver';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: UserloginComponent, canActivate:[LoggedInGuard ]},
   { path: 'login', component: UserloginComponent,canActivate:[LoggedInGuard ] },
   { path: 'register', component: RegisterComponent,canActivate:[LoggedInGuard ] },
+  { path: 'cartpage', component: CartComponent,canActivate:[AuthGuard ] },
   { path: 'products', component: MainpageComponent, resolve:{
     products: ProductsResolver
   }},

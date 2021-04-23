@@ -15,6 +15,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { UserService } from './users/user-service.service';
 import { ProductService } from './products/product.service';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
     UserloginComponent,
     MainpageComponent,
     RegisterComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

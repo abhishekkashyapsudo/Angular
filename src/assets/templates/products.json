@@ -4,11 +4,17 @@
         "name":"New Apple I Phone 11",
         "image":"assets/phones/appleiphone11.webp",
         "price":59900,
-        "description":"6.1-inch (15.5 cm diagonal) Liquid Retina HD LCD display, Water and dust resistant (2 meters for up to 30 minutes, IP68)",
+        "description":[
+            "5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "Memory, Storage & SIM: 12GB RAM | 256GB internal memory | Dual SIM (nano+nano) | OnePlus Nord currently support dual 4G SIM Cards or a Single 5G SIM. 5G+4G support will be available via OTA update at a future date",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
         "tags":["phone","iphone","mobile"],
         "category":"Mobiles",
         "quantity":10,
         "brand":"Apple",
+        "rating":5,
         "replacement":"10 day replacement Warranty"
     },
     {
@@ -16,11 +22,17 @@
         "name":"Apple I Phone 12 Pro",
         "image":"assets/phones/iphone12.webp",
         "price":81900,
-        "description":"5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+        "description":[
+            "5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "Memory, Storage & SIM: 12GB RAM | 256GB internal memory | Dual SIM (nano+nano) | OnePlus Nord currently support dual 4G SIM Cards or a Single 5G SIM. 5G+4G support will be available via OTA update at a future date",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
         "tags":["phone","iphone","mobile"],
         "category":"Mobiles",
         "quantity":8,
         "brand":"Apple",
+        "rating":4,
         "replacement":"10 day replacement Warranty"
     },
     {
@@ -28,11 +40,17 @@
         "name":"OnePlus Nord 5G",
         "image":"assets/phones/nord5g.webp",
         "price":29999,
-        "description":"5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+        "description":[
+            "5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "Memory, Storage & SIM: 12GB RAM | 256GB internal memory | Dual SIM (nano+nano) | OnePlus Nord currently support dual 4G SIM Cards or a Single 5G SIM. 5G+4G support will be available via OTA update at a future date",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
         "tags":["phone","oneplus","mobile"],
         "category":"Mobiles",
         "quantity":8,
         "brand":"One Plus",
+        "rating":3,
         "replacement":"7 day replacement Warranty"
     },
     {
@@ -40,11 +58,17 @@
         "name":"OnePlus 8T 5G",
         "image":"assets/phones/oneplus8t.jpg",
         "price":49999,
-        "description":"Rear Quad Camera with 48 MP Sony IMX586 Sensor, 16 MP Ultra Wide Angle, 5 MP macro lens and 2 MP monochrome lens | Front Camera with 16 MP Sony IMX471 Sensor",
+        "description":[
+            "5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "Memory, Storage & SIM: 12GB RAM | 256GB internal memory | Dual SIM (nano+nano) | OnePlus Nord currently support dual 4G SIM Cards or a Single 5G SIM. 5G+4G support will be available via OTA update at a future date",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
         "tags":["phone","oneplus","mobile"],
         "category":"Mobiles",
         "quantity":6,
         "brand":"One Plus",
+        "rating":4,
         "replacement":"7 day replacement Warranty"
     },
     {
@@ -52,11 +76,17 @@
         "name":"OnePlus 9R 5G",
         "image":"assets/phones/oneplus9r.webp",
         "price":39999,
-        "description":"Qualcomm Snapdragon 870 5G with upgraded Qualcomm Kryo 585 CPU that performs intense mobile computing at up to 3.2 GHz and also comes with an ultra-fast Qualcomm Adreno 650 GPU for superb on-device experiences",
+        "description":[
+            "5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "Memory, Storage & SIM: 12GB RAM | 256GB internal memory | Dual SIM (nano+nano) | OnePlus Nord currently support dual 4G SIM Cards or a Single 5G SIM. 5G+4G support will be available via OTA update at a future date",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
         "tags":["phone","oneplus","mobile"],
         "category":"Mobiles",
         "quantity":3,
         "brand":"One Plus",
+        "rating":5,
         "replacement":"7 day replacement Warranty"
     },
     {
@@ -64,11 +94,17 @@
         "name":"Redmi Note 10",
         "image":"assets/phones/redminote10.jpg",
         "price":11999,
-        "description":"Display: FHD+ (1080x2400) AMOLED Dot display; 16.33 centimeters (6.43 inch); 20:9 aspect ratio, Camera: 48 MP Quad Rear camera with 8MP Ultra-wide, 2MP Macro and Portrait lens| 13 MP Front camera",
+        "description":[
+            "5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "Memory, Storage & SIM: 12GB RAM | 256GB internal memory | Dual SIM (nano+nano) | OnePlus Nord currently support dual 4G SIM Cards or a Single 5G SIM. 5G+4G support will be available via OTA update at a future date",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
         "tags":["phone","oneplus","mobile"],
         "category":"Mobiles",
         "quantity":3,
         "brand":"Red MI",
+        "rating":1,
         "replacement":"7 day replacement Warranty"
     },
     {
@@ -76,11 +112,17 @@
         "name":"Samsung Guru 1200",
         "image":"assets/phones/samsungguru.webp",
         "price":1150,
-        "description":"Poly Ringtone, Mini-SIM, 1.52-inch TFT screen with 128x128 pixels resolution; Network: GSM (900/1,800MHz)",
+        "description":[
+            "5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "Memory, Storage & SIM: 12GB RAM | 256GB internal memory | Dual SIM (nano+nano) | OnePlus Nord currently support dual 4G SIM Cards or a Single 5G SIM. 5G+4G support will be available via OTA update at a future date",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
         "tags":["phone","samsung","mobile"],
         "category":"Mobiles",
         "quantity":3,
         "brand":"Samsung",
+        "rating":4,
         "replacement":"7 day replacement Warranty"
     },
     {
@@ -88,11 +130,17 @@
         "name":"Samsung Galaxy M 12",
         "image":"assets/phones/samsungm12.jpg",
         "price":10999,
-        "description":"48MP+5MP+2MP+2MP Quad camera setup- True 48MP (F 2.0) main camera + 5MP (F2.2) Ultra wide camera+ 2MP (F2.4) depth camera + 2MP (2.4) Macro Camera| 8MP (F2.2) front camera",
+        "description":[
+            "5.8-inch (14.7 cm diagonal) Super Retina XDR OLED display",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "Memory, Storage & SIM: 12GB RAM | 256GB internal memory | Dual SIM (nano+nano) | OnePlus Nord currently support dual 4G SIM Cards or a Single 5G SIM. 5G+4G support will be available via OTA update at a future date",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
         "tags":["phone","samsung","mobile"],
         "category":"Mobiles",
         "quantity":2,
         "brand":"Samsung",
+        "rating":5,
         "replacement":"No replacement Warranty"
     }
 ]

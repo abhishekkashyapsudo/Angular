@@ -1,1 +1,66 @@
-{{product | json}}
+<br/>
+<section class="mb-5">
+
+    <div class="row">
+      <div class="col-md-6 mb-4 mb-md-0">
+  
+        <div id="mdb-lightbox-ui"></div>
+  
+        <div class="mdb-lightbox">
+  
+          <div class="row product-gallery mx-1">
+  
+            <div class="col-12 mb-0">
+              <figure class="view overlay rounded z-depth-1 main-img">
+                  <img style="padding-left: 5%;" src="{{product.image}}"
+                  data-size="710x823" class="img-fluid z-depth-1">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+  
+        <h5>{{product.name}}</h5>
+        <p class="mb-2 text-muted text-uppercase small">{{product.category}}</p>
+            <span class = "fa fa-star checked" *ngFor='let in of counter(product.rating) ;let i = index'></span>
+        <br/>
+        <p><span class="mr-1"><strong>{{product.price | currency:'INR'}}</strong></span></p>
+        <br/>
+        <p><span class="mr-1"><strong>Description</strong></span></p>
+        <ul>
+            <li *ngFor='let p of product.description'>{{p}}</li>
+        </ul>
+        <div class="table-responsive">
+          <table class="table table-sm table-borderless mb-0">
+            <tbody>
+              <tr>
+                <th class="pl-0 w-25" scope="row"><strong>Brand</strong></th>
+                <td>{{product.brand}}</td>
+              </tr>
+              <tr>
+                <th class="pl-0 w-25" scope="row"><strong>Quantity Available</strong></th>
+                <td>{{product.quantity}}</td>
+              </tr>
+              <tr>
+                <th class="pl-0 w-25" scope="row"><strong>Replacement</strong></th>
+                <td>{{product.replacement}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div class="table-responsive mb-2">
+          <table class="table table-sm table-borderless">
+            <tbody>
+              
+              
+            </tbody>
+          </table>
+        </div>
+        <button type="button" (click) = "addToCart(product)" class="btn btn-primary btn-md mr-1 mb-2"><i
+            class="fa fa-shopping-cart pr-2"></i>Add to cart</button>
+      </div>
+    </div>
+  
+  </section>

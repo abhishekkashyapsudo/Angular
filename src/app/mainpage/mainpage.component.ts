@@ -69,7 +69,7 @@ export class MainpageComponent implements OnInit {
         }
       });
   }
-  viewProduct(id){
+  viewProduct(id: string){
     this.router.navigateByUrl("products/" + id)
   }
  
