@@ -18,7 +18,7 @@ export class ProductService {
   
 
   private PRODUCT_BASE_URL = "assets/templates/"
-  private static products: Product[];
+  public static products: Product[];
   private static cart: Map<string, Map<string, number>>;
 
   constructor(private readonly http: HttpClient) {
@@ -55,10 +55,12 @@ export class ProductService {
     ProductService.cart.set(userId, crt); 
    }
 
-   increment(id: string) {
+   increment(id: string, quantity: number) {
     let userId = localStorage.getItem("username");
     let crt = this.getCartforUser(userId);
-    crt.set(id, crt.get(id)+1);
+    if(crt.get(id) != quantity){
+      crt.set(id, crt.get(id)+1);
+    }
   }
   decrement(id: string) {
     let userId = localStorage.getItem("username");

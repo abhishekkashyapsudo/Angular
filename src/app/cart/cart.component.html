@@ -16,7 +16,7 @@
 
                         <p> <input type="button" value="-" (click)="decrease(p.key.id)" class="minus">&nbsp;&nbsp;&nbsp;
                             {{p.value}}&nbsp;&nbsp;&nbsp;
-                        <input type="button" value="+" (click)="increase(p.key.id)"class="plus" [disabled] = "p.value==p.key.quantity"> x {{p.key.price | currency:"INR"}}</p>
+                        <input type="button" value="+" (click)="increase(p.key)"class="plus" [disabled] = "p.value==p.key.quantity"> x {{p.key.price | currency:"INR"}}</p>
                         
                         <span class="invalid-feedback">
                             <span >
