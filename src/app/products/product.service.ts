@@ -10,24 +10,24 @@ import { map } from 'rxjs/operators';
 })
 
 export class ProductService {
-  
-  
-  getProductWithId(key: string) {
-    return ProductService.products.filter(p => p.id == key)[0];
-  }
-  
-
   private PRODUCT_BASE_URL = "assets/templates/"
   public static products: Product[];
-  private static cart: Map<string, Map<string, number>>;
+  public static cart: Map<string, Map<string, number>>;
 
   constructor(private readonly http: HttpClient) {
     const url = `${this.PRODUCT_BASE_URL}/products.json`;
     this.http.get<Product[]>(url).subscribe(data =>
       ProductService.products = data
     )
+
     ProductService.cart = new Map<string, Map<string, number>>();
   }
+
+
+  getProductWithId(key: string) {
+    return ProductService.products.filter(p => p.id == key)[0];
+  }
+  
   addToCart( product: Product){
     let userId = localStorage.getItem("username");
     let crt = this.getCartforUser(userId);
