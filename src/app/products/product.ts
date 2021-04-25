@@ -1,4 +1,19 @@
-export class Product {    
+export class Product {
+    static fakePRoduct() {
+        let product:Product = new Product();
+        product.id = "L1000";
+        product.name = "HP 15 15.6-inch HD Laptop"
+        product.quantity = 5;
+        return product;
+    } 
+    static fakePRoduct1() {
+        let product:Product = new Product();
+        product.id = "L1001";
+        product.name = "HP 15 15.6-inch HD Laptop"
+        product.quantity = 5;
+
+        return product;
+    }    
 
     public name: string;
     public id: string;

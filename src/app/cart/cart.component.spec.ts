@@ -1,8 +1,8 @@
 import { HttpClientModule } from '@angular/common/http';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
-import { range } from 'rxjs';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Product } from '../products/product';
 import { ProductService } from '../products/product.service';
 
@@ -19,7 +19,7 @@ describe('CartComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [CartComponent],
       providers: [ProductService],
-      imports: [ReactiveFormsModule, HttpClientModule, RouterTestingModule],
+      imports: [ReactiveFormsModule, HttpClientModule, RouterTestingModule, TranslateModule.forRoot()],
 
     })
       .compileComponents();
@@ -64,20 +64,22 @@ describe('CartComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have a title 'Welcome to your Shopping cart,user!'`, async(() => {
+  it(`should have a title 'Welcome to your Shopping cart,user!'`, (() => {
     localStorage.setItem('username', 'user')
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.debugElement.componentInstance;
-    expect(component.title).toEqual("Welcome to your Shopping cart, user");
+    expect(component.title).toEqual("user");
   }));
 
-  it(`should initialize the cart  with product and value`, async(() => {
+  it(`should initialize the cart  with product and value`, (() => {
+    ProductService.products = [Product.fakePRoduct()];
+
     localStorage.setItem('username', 'nagp')
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.debugElement.componentInstance;
     let productService: ProductService = TestBed.get(ProductService);
 
-    expect(23).toEqual(ProductService.products.length);
+    expect(1).toEqual(ProductService.products.length);
     let product = ProductService.products[0];
     productService.addToCart(product);
     productService.addToCart(product);
@@ -90,13 +92,14 @@ describe('CartComponent', () => {
 
   }));
 
-  it(`increase should increase the value of product in cart by 1`, async(() => {
+  it(`increase should increase the value of product in cart by 1`,  (() =>{
+    ProductService.products = [Product.fakePRoduct()];
+
     localStorage.setItem('username', 'nagp')
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.debugElement.componentInstance;
     let productService: ProductService = TestBed.get(ProductService);
 
-    expect(23).toEqual(ProductService.products.length);
     let product = ProductService.products[0];
     productService.addToCart(product);
     component.initCart();
@@ -106,13 +109,13 @@ describe('CartComponent', () => {
     }
   }));
 
-  it(`increase should not increase the value of product if it is has already the avaiabe quantity`, async(() => {
+  it(`increase should not increase the value of product if it is has already the avaiabe quantity`, (() => {
+    ProductService.products = [Product.fakePRoduct()];
+
     localStorage.setItem('username', 'nagp')
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.debugElement.componentInstance;
     let productService: ProductService = TestBed.get(ProductService);
-
-    expect(23).toEqual(ProductService.products.length);
     let product = ProductService.products[0];
     productService.addToCart(product);
     component.initCart();
@@ -126,15 +129,17 @@ describe('CartComponent', () => {
     expect(component.cart.values().next().value).toEqual(product.quantity);
     component.increase(product);
     expect(component.cart.values().next().value).toEqual(product.quantity);
+    
   }));
 
-  it(`decrease should decrease the value of product in cart by 1`, async(() => {
+  it(`decrease should decrease the value of product in cart by 1`, (() => {
+    ProductService.products = [Product.fakePRoduct()];
+
     localStorage.setItem('username', 'nagp')
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.debugElement.componentInstance;
     let productService: ProductService = TestBed.get(ProductService);
 
-    expect(23).toEqual(ProductService.products.length);
     let product = ProductService.products[0];
     productService.addToCart(product);
     productService.addToCart(product);
@@ -144,13 +149,15 @@ describe('CartComponent', () => {
     expect(component.cart.values().next().value).toEqual(1);
   }));
 
-  it(`decrease should remove the product from cart if quantity becomes 0`, async(() => {
+  it(`decrease should remove the product from cart if quantity becomes 0`, (() => {
+    ProductService.products = [Product.fakePRoduct()];
+
     localStorage.setItem('username', 'nagp')
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.debugElement.componentInstance;
     let productService: ProductService = TestBed.get(ProductService);
 
-    expect(23).toEqual(ProductService.products.length);
+    expect(1).toEqual(ProductService.products.length);
     let product = ProductService.products[0];
     productService.addToCart(product);
     productService.addToCart(product);
@@ -163,13 +170,14 @@ describe('CartComponent', () => {
 
   }));
 
-  it(`removeProduct should remove the product from cart`, async(() => {
+  it(`removeProduct should remove the product from cart`, (() => {
+    ProductService.products = [Product.fakePRoduct()];
+
     localStorage.setItem('username', 'nagp')
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.debugElement.componentInstance;
     let productService: ProductService = TestBed.get(ProductService);
 
-    expect(23).toEqual(ProductService.products.length);
     let product = ProductService.products[0];
     productService.addToCart(product);
     productService.addToCart(product);

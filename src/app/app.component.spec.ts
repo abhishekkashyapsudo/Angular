@@ -5,6 +5,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import {HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -14,7 +15,8 @@ describe('AppComponent', () => {
         HttpClientTestingModule,
         RouterModule,
         RouterModule.forRoot([]),
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        TranslateModule.forRoot()
         
       ],
       declarations: [

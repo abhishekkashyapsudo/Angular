@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 
 export class ProductService {
-  private PRODUCT_BASE_URL = "assets/templates/"
+  private PRODUCT_BASE_URL = "assets/templates"
   public static products: Product[];
   public static cart: Map<string, Map<string, number>>;
 
@@ -23,6 +23,8 @@ export class ProductService {
     ProductService.cart = new Map<string, Map<string, number>>();
   }
 
+  ngOnInit(){
+  }
 
   getProductWithId(key: string) {
     return ProductService.products.filter(p => p.id == key)[0];
