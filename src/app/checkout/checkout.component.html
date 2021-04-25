@@ -1,11 +1,11 @@
 <div style="margin:5%">
     <hr />
-    <h2 style="text-align:center">{{title}} {{gtotal | currency:"INR"}}</h2>
+    <h2 style="text-align:center">{{title}} {{'checkout.check' | translate}} {{gtotal | currency:"INR"}}</h2>
     <hr />
     <form style="padding: 5%;border: 1px solid black;" novalidate [formGroup]="userForm">
         <div class="form-row">
             <div class="form-group col-md-1">
-                <label for="inputEmail4">Salutation</label>
+                <label for="inputEmail4">{{'checkout.salutation' | translate}}</label>
                 <select id="salutation" class="form-control" formControlName="salutation">
                     <option value="Mr.">Mr.</option>
                     <option value="Mrs.">Mrs.</option>
@@ -17,8 +17,8 @@
                 </select>
             </div>
             <div class="form-group col-md-5">
-                <label for="name">Name</label>
-                <input class="form-control" id="name" type="name" placeholder="Enter Name *" formControlName="name"
+                <label for="name">{{'checkout.name' | translate}}</label>
+                <input class="form-control" id="name" type="name" placeholder="{{'checkout.ename' | translate}} *" formControlName="name"
                     [ngClass]="{
                                     'is-invalid':
                                     (userForm.get('name').touched || userForm.get('name').dirty) &&
@@ -26,16 +26,16 @@
                                     }" />
                 <span class="invalid-feedback">
                     <span *ngIf="userForm.get('name').errors?.required">
-                        Please enter your name.
+                        {{'checkout.entername' | translate}}
                     </span>
                     <span *ngIf="userForm.get('name').errors?.minlength">
-                        Name must be at least 5 characters long.
+                        {{'checkout.name5' | translate}}
                     </span>
                 </span>
             </div>
             <div class="form-group col-md-6">
-                <label for="inputPassword4">Phone</label>
-                <input class="form-control" id="phone" type="phone" placeholder="Enter Phone Number *"
+                <label for="inputPassword4">{{'checkout.phone' | translate}}</label>
+                <input class="form-control" id="phone" type="phone" placeholder="{{'checkout.ephone' | translate}} *"
                     formControlName="phone" [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('phone').touched || userForm.get('phone').dirty) &&
@@ -43,20 +43,20 @@
                                 }" />
                 <span class="invalid-feedback">
                     <span *ngIf="userForm.get('phone').errors?.required">
-                        Please enter your phone number.
+                        {{'checkout.enterphone' | translate}}
                     </span>
                     <span *ngIf="userForm.get('phone').errors?.pattern">
-                        Phone number must be numeric.
+                        {{'checkout.phonenumeric' | translate}}
                     </span>
                     <span *ngIf="userForm.get('phone').errors?.minlength || userForm.get('phone').errors?.maxlength">
-                        Phone number must be 10 digits long.
+                        {{'checkout.phone10' | translate}}
                     </span>
                 </span>
             </div>
         </div>
         <div class="form-group">
-            <label for="inputAddress">Address</label>
-            <input class="form-control" id="address1" type="name" placeholder="Enter Address 1*"
+            <label for="inputAddress">{{'checkout.address' | translate}}</label>
+            <input class="form-control" id="address1" type="name" placeholder="{{'checkout.address1' | translate}} 1*"
                 formControlName="address1" [ngClass]="{
         'is-invalid':
         (userForm.get('address1').touched || userForm.get('address1').dirty) &&
@@ -64,16 +64,16 @@
         }" />
             <span class="invalid-feedback">
                 <span *ngIf="userForm.get('address1').errors?.required">
-                    Please enter your Address.
+                    {{'checkout.eaddress' | translate}}
                 </span>
                 <span *ngIf="userForm.get('address1').errors?.minlength">
-                    Address must be at least 5 characters long.
+                    {{'checkout.address5' | translate}}
                 </span>
             </span>
         </div>
         <div class="form-group">
-            <label for="inputAddress2">Address 2</label>
-            <input class="form-control" id="address2" type="name" placeholder="Enter Address 2*"
+            <label for="inputAddress2">{{'checkout.address' | translate}} 2</label>
+            <input class="form-control" id="address2" type="name" placeholder="{{'checkout.address1' | translate}} 2 *"
                 formControlName="address2" [ngClass]="{
         'is-invalid':
         (userForm.get('address2').touched || userForm.get('address2').dirty) &&
@@ -81,32 +81,32 @@
         }" />
             <span class="invalid-feedback">
                 <span *ngIf="userForm.get('address2').errors?.required">
-                    Please enter your Address.
+                    {{'checkout.eaddress' | translate}}
                 </span>
                 <span *ngIf="userForm.get('address2').errors?.minlength">
-                    Address must be at least 5 characters long.
+                    {{'checkout.address5' | translate}}
                 </span>
             </span>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
-                <input class="form-control" id="city" type="text" placeholder="City *" formControlName="city" [ngClass]="{
+                <label for="inputCity">{{'checkout.city' | translate}}</label>
+                <input class="form-control" id="city" type="text" placeholder="{{'checkout.city' | translate}} *" formControlName="city" [ngClass]="{
             'is-invalid':
             (userForm.get('city').touched || userForm.get('city').dirty) &&
             !userForm.get('city').valid
             }" />
                 <span class="invalid-feedback">
                     <span *ngIf="userForm.get('city').errors?.required">
-                        Please enter your City.
+                        {{'checkout.ecity' | translate}}
                     </span>
                     <span *ngIf="userForm.get('city').errors?.minlength">
-                        City must be at least 3 characters long.
+                        {{'checkout.city3' | translate}}
                     </span>
                 </span>
             </div>
             <div class="form-group col-md-4">
-                <label for="inputState">State</label>
+                <label for="inputState">{{'checkout.state' | translate}}</label>
                 <select id="state" class="form-control" formControlName="state">
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -147,8 +147,8 @@
                 </select>
             </div>
             <div class="form-group col-md-2">
-                <label for="inputZip">PIN</label>
-                <input class="form-control" id="pin" type="pin" placeholder="Enter PIN *" formControlName="pin"
+                <label for="inputZip">{{'checkout.pin' | translate}}</label>
+                <input class="form-control" id="pin" type="pin" placeholder="{{'checkout.epin' | translate}} *" formControlName="pin"
                     [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('pin').touched || userForm.get('pin').dirty) &&
@@ -156,22 +156,22 @@
                                 }" />
                 <span class="invalid-feedback">
                     <span *ngIf="userForm.get('pin').errors?.required">
-                        Please enter your PIN.
+                        {{'checkout.epin' | translate}}
                     </span>
                     <span *ngIf="userForm.get('pin').errors?.pattern">
-                        PIN must be numeric.
+                        {{'checkout.pnumeric' | translate}}
                     </span>
                     <span *ngIf="userForm.get('pin').errors?.minlength || userForm.get('pin').errors?.maxlength">
-                        PIN must be 6 digits long.
+                        {{'checkout.pin6' | translate}}
                     </span>
 
                 </span>
             </div>
         </div>
         <button  class="btn btn-primary"
-            (click)="gotoProducts()">Products Page</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            (click)="gotoProducts()">{{'checkout.ppage' | translate}}</button>&nbsp;&nbsp;&nbsp;&nbsp;
         <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary"
-            (click)="placeOrder()">Checkout</button>
+            (click)="placeOrder()">{{'checkout.checkout' | translate}}</button>
         <br/>
         <br/>
             <h5>{{success}}</h5>

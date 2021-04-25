@@ -1,8 +1,8 @@
 <br/>
-<h2 style="text-align:center;">{{title}}</h2>
+<h2 style="text-align:center;">{{'main-page.title' | translate}}</h2>
 <br/>
 <div class="input-group col-md-4">
-  <input class="form-control py-2 border-right-0 border" [(ngModel)]="search" id="idTxt" type="text" placeholder="Filter name: "/>
+  <input class="form-control py-2 border-right-0 border" [(ngModel)]="search" id="idTxt" type="text" placeholder="{{'main-page.fname' | translate}}: "/>
   <span class="input-group-append">
     <button class="btn btn-outline-secondary border-left-0 border" type="button">
           <i class="fa fa-search"></i>
@@ -11,7 +11,7 @@
   &nbsp;&nbsp;
 </div>
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filtered by: {{search}}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{'main-page.fby' | translate}} {{search}}
 <br/><br/>
 <accordion [isAnimated]="true">
   <span *ngFor="let p of map | keyvalue">
@@ -40,7 +40,7 @@
 
                     <h4>{{product.name}}</h4>
                     <b><p>{{product.price | currency:'INR'}}</p></b>
-                    <a [routerLink]="" (click) = "viewProduct(product.id)" class="btn btn-primary">View Detail</a>
+                    <a [routerLink]="" (click) = "viewProduct(product.id)" class="btn btn-primary">{{'main-page.vdetail' | translate}} </a>
                   </figcaption>
                 </div>
               </div>

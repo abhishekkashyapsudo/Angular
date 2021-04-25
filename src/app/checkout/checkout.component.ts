@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { MustMatch } from '../helpers/must-match.validator';
 import { User } from '../models/user';
 import { Product } from '../products/product';
@@ -27,10 +28,10 @@ export class CheckoutComponent implements OnInit {
   
   userForm: FormGroup;
   
-  constructor(public fb: FormBuilder, private userService: UserService, private productService: ProductService,private readonly router: Router) { 
+  constructor(public translate: TranslateService, public fb: FormBuilder, private userService: UserService, private productService: ProductService,private readonly router: Router) { 
     this.cart = new Map<Product, number>();
     if(localStorage.getItem('username'))
-      this.title =  localStorage.getItem('username').toUpperCase() +" , Checkout and pay ";
+      this.title =  localStorage.getItem('username').toUpperCase() +"";
     this.success = "";
     this.initCart();    
   }
@@ -79,7 +80,7 @@ export class CheckoutComponent implements OnInit {
     const pin = this.userForm.value['pin']; 
     const city = this.userForm.value['city']; 
     const state = this.userForm.value['state']; 
-    this.success = "Order placed successfully and will be delivered within 3 days at:";
+    this.success = this.translate.instant('checkout.success')
     this.name = salutation+" "+name +" ";
     this.address = address1+" "+address2 +" ";
     this.state = city+", "+state +" "+pin;

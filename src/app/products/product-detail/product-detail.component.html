@@ -27,7 +27,7 @@
         <br/>
         <p><span class="mr-1"><strong>{{product.price | currency:'INR'}}</strong></span></p>
         <br/>
-        <p><span class="mr-1"><strong>Description</strong></span></p>
+        <p><span class="mr-1"><strong>{{'pdetail.desc' | translate}}</strong></span></p>
         <ul>
             <li *ngFor='let p of product.description'>{{p}}</li>
         </ul>
@@ -35,19 +35,19 @@
           <table class="table table-sm table-borderless mb-0">
             <tbody>
               <tr>
-                <th class="pl-0 w-25" scope="row"><strong>Brand</strong></th>
+                <th class="pl-0 w-25" scope="row"><strong>{{'pdetail.brand' | translate}}</strong></th>
                 <td>{{product.brand}}</td>
               </tr>
               <tr>
-                <th class="pl-0 w-25" scope="row"><strong>Quantity Available</strong></th>
+                <th class="pl-0 w-25" scope="row"><strong>{{'pdetail.quantity' | translate}}</strong></th>
                 <td>{{product.quantity}}</td>
               </tr>
               <tr>
-                <th class="pl-0 w-25" scope="row"><strong>Replacement</strong></th>
+                <th class="pl-0 w-25" scope="row"><strong>{{'pdetail.replacement' | translate}}</strong></th>
                 <td>{{product.replacement}}</td>
               </tr>
               <tr>
-                <th class="pl-0 w-25" scope="row"><strong>Tags</strong></th>
+                <th class="pl-0 w-25" scope="row"><strong>{{'pdetail.tags' | translate}}</strong></th>
                 <td>{{product.tags}}</td>
               </tr>
             </tbody>
@@ -63,7 +63,7 @@
           </table>
         </div>
         <button type="button" (click) = "addToCart(product)" class="btn btn-primary btn-md mr-1 mb-2"><i
-            class="fa fa-shopping-cart pr-2"></i>Add to cart</button>
+            class="fa fa-shopping-cart pr-2"></i>{{'pdetail.acart' | translate}}</button>
       </div>
     </div>
   

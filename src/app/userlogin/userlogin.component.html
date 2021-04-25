@@ -5,10 +5,10 @@
             <div id="login-column" class="col-md-6">
                 <div id="login-box" class="col-md-12">
                     <form novalidate (ngSubmit)="login()" [formGroup]="userForm">
-                        <h3 class="text-center text-info">Login</h3>
+                        <h3 class="text-center text-info">{{'login.login' | translate}}</h3>
                         <div class="form-group">
-                            <label for="username" class="text-info">Username:</label><br>
-                            <input class="form-control" id="txtName" type="text" placeholder="Enter Name"
+                            <label for="username" class="text-info">{{'login.uname' | translate}}:</label><br>
+                            <input class="form-control" id="txtName" type="text" placeholder="{{'register.euname' | translate}}"
                                 formControlName="username" [ngClass]="{
                             'is-invalid':
                             (userForm.get('username').touched || userForm.get('username').dirty) &&
@@ -16,17 +16,17 @@
                             }" />
                             <span class="invalid-feedback">
                                 <span *ngIf="userForm.get('username').errors?.required">
-                                    Please enter your username.
+                                    {{'register.peuname' | translate}}
                                 </span>
                                 <span *ngIf="userForm.get('username').errors?.minlength">
-                                    Username must be longer than 4 characters.
+                                    {{'register.4uname' | translate}}    
                                 </span>
                             </span>
                         </div>
 
                         <div class="form-group">
-                            <label for="password" class="text-info">Password:</label><br>
-                            <input class="form-control" id="txtPwd" type="password" placeholder="Enter Password"
+                            <label for="password" class="text-info">{{'login.password' | translate}}:</label><br>
+                            <input class="form-control" id="txtPwd" type="password" placeholder="{{'register.epwd' | translate}}"
                                 formControlName="password" [ngClass]="{
                             'is-invalid':
                             (userForm.get('password').touched || userForm.get('password').dirty) &&
@@ -34,21 +34,21 @@
                             }" />
                             <span class="invalid-feedback">
                                 <span *ngIf="userForm.get('password').errors?.required">
-                                    Please enter your password.
+                                    {{'register.pepwd' | translate}}
                                 </span>
                                 <span *ngIf="userForm.get('password').errors?.minlength">
-                                    Password must be at least 4 characters long.
+                                    {{'register.4pwd' | translate}}
                                 </span>
                             </span>
                         </div>
                         <div class="form-group">
                             <input type="submit"
                                 [disabled]="!userForm.get('username').valid ||  !userForm.get('password').valid"
-                                name="submit" class="btn btn-info btn-md" value="submit">
+                                name="submit" class="btn btn-info btn-md" value="{{'login.submit' | translate}}">
                         </div>
                         <div id="register-link" class="text-right">
-                            <a [routerLink]="['/register']" routerLinkActive='active' class="text-info">Register
-                                here</a>
+                            <a [routerLink]="['/register']" routerLinkActive='active' class="text-info">{{'login.reg' | translate}}
+                                </a>
                         </div>
                         <span style="color: red;">
                             {{error}}

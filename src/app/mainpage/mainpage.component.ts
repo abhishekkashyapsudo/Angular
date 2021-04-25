@@ -14,7 +14,6 @@ export class MainpageComponent implements OnInit {
   private products: Product[];
   userForm: FormGroup;
   public map: Map<string, Product[]>;
-  public title: string = "List Of Products";
   public _search: string;
   constructor(public fb: FormBuilder,private readonly route: ActivatedRoute, private readonly router: Router) {
    

@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { User } from '../models/user';
 import {UserService} from '../users/user-service.service'
 @Component({
@@ -11,7 +12,7 @@ export class UserloginComponent implements OnInit {
     error: String ="";
     loggedUser: User;
  
-    constructor(public fb: FormBuilder, private userService: UserService, private readonly router: Router) { }
+    constructor(public translate: TranslateService, public fb: FormBuilder, private userService: UserService, private readonly router: Router) { }
 
     ngOnInit() {
         this.userForm = this.fb.group({
@@ -34,7 +35,7 @@ export class UserloginComponent implements OnInit {
       }
       else{
         console.log("Log in failed.");
-        this.error = "Username/Password combination does not exist."
+        this.error = this.translate.instant('login.notmatch');
       }
     }
 }

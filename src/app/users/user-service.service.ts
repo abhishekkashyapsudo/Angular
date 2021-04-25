@@ -26,7 +26,7 @@ export class UserService {
   }
 
   login(username: any, password: any) {
-    let filtered= UserService.users.filter((user: User) => user.username == username && user.password == password);
+    let filtered= UserService.users.filter((user: User) => user.username.toLowerCase() == username.toLowerCase() && user.password == password);
     if (filtered.length == 0){
       return undefined;
     }
