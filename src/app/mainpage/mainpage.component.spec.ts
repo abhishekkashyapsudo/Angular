@@ -12,10 +12,10 @@ describe('MainpageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainpageComponent ],
+      declarations: [MainpageComponent],
       imports: [FormsModule, HttpClientModule, RouterTestingModule, TranslateModule.forRoot()]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -24,5 +24,5 @@ describe('MainpageComponent', () => {
     fixture.detectChanges();
   });
 
-  
+
 });

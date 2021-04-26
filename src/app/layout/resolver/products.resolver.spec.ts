@@ -9,7 +9,7 @@ describe('ProductsResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ HttpClientModule, RouterTestingModule]
+      imports: [HttpClientModule, RouterTestingModule]
 
     });
     resolver = TestBed.inject(ProductsResolver);
@@ -19,5 +19,5 @@ describe('ProductsResolver', () => {
     expect(resolver).toBeTruthy();
   });
 
-  
+
 });

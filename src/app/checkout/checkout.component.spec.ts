@@ -12,47 +12,47 @@ describe('CheckoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CheckoutComponent ],
+      declarations: [CheckoutComponent],
       imports: [ReactiveFormsModule, HttpClientModule, RouterTestingModule, TranslateModule.forRoot()]
 
     })
-    .compileComponents();
+      .compileComponents();
   });
 
-  
+
 
   beforeEach(() => {
     let store = {};
-  const mockLocalStorage = {
-    getItem: (key: string): string => {
-      return key in store ? store[key] : null;
-    },
-    setItem: (key: string, value: string) => {
-      store[key] = `${value}`;
-    },
-    removeItem: (key: string) => {
-      delete store[key];
-    },
-    clear: () => {
-      store = {};
-    }
-  };
-  spyOn(localStorage, 'getItem')
-    .and.callFake(mockLocalStorage.getItem);
-  spyOn(localStorage, 'setItem')
-    .and.callFake(mockLocalStorage.setItem);
-  spyOn(localStorage, 'removeItem')
-    .and.callFake(mockLocalStorage.removeItem);
-  spyOn(localStorage, 'clear')
-    .and.callFake(mockLocalStorage.clear);
+    const mockLocalStorage = {
+      getItem: (key: string): string => {
+        return key in store ? store[key] : null;
+      },
+      setItem: (key: string, value: string) => {
+        store[key] = `${value}`;
+      },
+      removeItem: (key: string) => {
+        delete store[key];
+      },
+      clear: () => {
+        store = {};
+      }
+    };
+    spyOn(localStorage, 'getItem')
+      .and.callFake(mockLocalStorage.getItem);
+    spyOn(localStorage, 'setItem')
+      .and.callFake(mockLocalStorage.setItem);
+    spyOn(localStorage, 'removeItem')
+      .and.callFake(mockLocalStorage.removeItem);
+    spyOn(localStorage, 'clear')
+      .and.callFake(mockLocalStorage.clear);
     fixture = TestBed.createComponent(CheckoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    localStorage.setItem('username','test')
+    localStorage.setItem('username', 'test');
   });
 
   it('should create', () => {
-    localStorage.setItem('username','test')
+    localStorage.setItem('username', 'test');
     expect(component).toBeTruthy();
   });
 });

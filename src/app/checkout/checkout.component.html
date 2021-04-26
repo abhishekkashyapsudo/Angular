@@ -18,8 +18,8 @@
             </div>
             <div class="form-group col-md-5">
                 <label for="name">{{'checkout.name' | translate}}</label>
-                <input class="form-control" id="name" type="name" placeholder="{{'checkout.ename' | translate}} *" formControlName="name"
-                    [ngClass]="{
+                <input class="form-control" id="name" type="name" placeholder="{{'checkout.ename' | translate}} *"
+                    formControlName="name" [ngClass]="{
                                     'is-invalid':
                                     (userForm.get('name').touched || userForm.get('name').dirty) &&
                                     !userForm.get('name').valid
@@ -91,7 +91,8 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputCity">{{'checkout.city' | translate}}</label>
-                <input class="form-control" id="city" type="text" placeholder="{{'checkout.city' | translate}} *" formControlName="city" [ngClass]="{
+                <input class="form-control" id="city" type="text" placeholder="{{'checkout.city' | translate}} *"
+                    formControlName="city" [ngClass]="{
             'is-invalid':
             (userForm.get('city').touched || userForm.get('city').dirty) &&
             !userForm.get('city').valid
@@ -148,8 +149,8 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="inputZip">{{'checkout.pin' | translate}}</label>
-                <input class="form-control" id="pin" type="pin" placeholder="{{'checkout.epin' | translate}} *" formControlName="pin"
-                    [ngClass]="{
+                <input class="form-control" id="pin" type="pin" placeholder="{{'checkout.epin' | translate}} *"
+                    formControlName="pin" [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('pin').touched || userForm.get('pin').dirty) &&
                                 !userForm.get('pin').valid
@@ -168,17 +169,17 @@
                 </span>
             </div>
         </div>
-        <button  class="btn btn-primary"
-            (click)="gotoProducts()">{{'checkout.ppage' | translate}}</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary" (click)="gotoProducts()">{{'checkout.ppage' |
+            translate}}</button>&nbsp;&nbsp;&nbsp;&nbsp;
         <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary"
             (click)="placeOrder()">{{'checkout.checkout' | translate}}</button>
-        <br/>
-        <br/>
-            <h5>{{success}}</h5>
-            <h5>{{name}}</h5>
-            <h5>{{address}}</h5>
-            <h5>{{state}}</h5>
-            <h5>{{phone}}</h5>
+        <br />
+        <br />
+        <h5>{{success}}</h5>
+        <h5>{{name}}</h5>
+        <h5>{{address}}</h5>
+        <h5>{{state}}</h5>
+        <h5>{{phone}}</h5>
 
     </form>
 

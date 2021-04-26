@@ -7,30 +7,17 @@ import { ProductService } from './product.service';
 describe('ProductService', () => {
   let service: ProductService;
 
-  let originalTimeout: number;
-
-  afterEach(function () {
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
-  });
   beforeEach(() => {
-   
-    originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000000;
-    TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [ProductService]
-    });
-
     service = TestBed.inject(ProductService);
-    localStorage.setItem('username', 'user')
-    
+    localStorage.setItem('username', 'user');
+
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should initialize the products from json file',  (() => {
+  it('should initialize the products from json file', (() => {
     ProductService.products = [Product.fakePRoduct()];
     expect(ProductService.products.length).toEqual(1);
   }));
@@ -48,22 +35,22 @@ describe('ProductService', () => {
   it('addToCart  should add the passed product to cart of current user', () => {
     ProductService.products = [Product.fakePRoduct()];
 
-    localStorage.setItem('username', 'user')
-    let product = service.getProductWithId('L1000');
+    localStorage.setItem('username', 'user');
+    const product = service.getProductWithId('L1000');
     service.addToCart(product);
     expect(ProductService.cart.get('user').size).toEqual(1);
-    let map: Map<string, number> = ProductService.cart.get('user');
+    const map: Map<string, number> = ProductService.cart.get('user');
     expect(map.get('L1000')).toEqual(1);
   });
 
   it('placeOrder  should empty the  cart for current user', () => {
     ProductService.products = [Product.fakePRoduct()];
 
-    localStorage.setItem('username', 'user')
-    let product = service.getProductWithId('L1000');
+    localStorage.setItem('username', 'user');
+    const product = service.getProductWithId('L1000');
     service.addToCart(product);
     expect(ProductService.cart.get('user').size).toEqual(1);
-    let map: Map<string, number> = ProductService.cart.get('user');
+    const map: Map<string, number> = ProductService.cart.get('user');
     expect(map.get('L1000')).toEqual(1);
     service.placeOrder();
     expect(ProductService.cart.get('user').size).toEqual(0);
@@ -73,13 +60,13 @@ describe('ProductService', () => {
   it('removeProduct  should remove the product with the passed id from user cart', () => {
     ProductService.products = [Product.fakePRoduct(), Product.fakePRoduct1()];
 
-    localStorage.setItem('username', 'user')
-    let product = service.getProductWithId('L1000');
-    let product1 = service.getProductWithId('L1001');
+    localStorage.setItem('username', 'user');
+    const product = service.getProductWithId('L1000');
+    const product1 = service.getProductWithId('L1001');
     service.addToCart(product);
     service.addToCart(product1);
     expect(ProductService.cart.get('user').size).toEqual(2);
-    let map: Map<string, number> = ProductService.cart.get('user');
+    const map: Map<string, number> = ProductService.cart.get('user');
     expect(map.get('L1000')).toEqual(1);
     service.removeProduct(product.id);
     expect(ProductService.cart.get('user').size).toEqual(1);
@@ -89,13 +76,13 @@ describe('ProductService', () => {
   it('increment  should increase the product with the passed id for user cartby 1', () => {
     ProductService.products = [Product.fakePRoduct(), Product.fakePRoduct1()];
 
-    localStorage.setItem('username', 'user')
-    let product = service.getProductWithId('L1000');
-    let product1 = service.getProductWithId('L1001');
+    localStorage.setItem('username', 'user');
+    const product = service.getProductWithId('L1000');
+    const product1 = service.getProductWithId('L1001');
     service.addToCart(product);
     service.addToCart(product1);
     expect(ProductService.cart.get('user').size).toEqual(2);
-    let map: Map<string, number> = ProductService.cart.get('user');
+    const map: Map<string, number> = ProductService.cart.get('user');
     expect(map.get('L1000')).toEqual(1);
     service.increment('L1000', product.quantity);
     expect(map.get('L1000')).toEqual(2);
@@ -114,12 +101,12 @@ describe('ProductService', () => {
   it('decrement  should decrease the product with the passed id for user cart by 1', () => {
     ProductService.products = [Product.fakePRoduct()];
 
-    localStorage.setItem('username', 'user')
-    let product = service.getProductWithId('L1000');
+    localStorage.setItem('username', 'user');
+    const product = service.getProductWithId('L1000');
     service.addToCart(product);
-    service.increment(product.id, product.quantity)
+    service.increment(product.id, product.quantity);
     expect(ProductService.cart.get('user').size).toEqual(1);
-    let map: Map<string, number> = ProductService.cart.get('user');
+    const map: Map<string, number> = ProductService.cart.get('user');
     expect(map.get('L1000')).toEqual(2);
     service.decrement(product.id);
     expect(map.get('L1000')).toEqual(1);
@@ -133,12 +120,12 @@ describe('ProductService', () => {
   it('getcartForUser  should return the cart for current user', () => {
     ProductService.products = [Product.fakePRoduct()];
 
-    localStorage.setItem('username', 'user')
-    let product = service.getProductWithId('L1000');
+    localStorage.setItem('username', 'user');
+    const product = service.getProductWithId('L1000');
     service.addToCart(product);
-    service.increment(product.id, product.quantity)
+    service.increment(product.id, product.quantity);
     expect(ProductService.cart.get('user').size).toEqual(1);
-    let map: Map<string, number> = service.getCartforUser('user');
+    const map: Map<string, number> = service.getCartforUser('user');
     expect(map.get('L1000')).toEqual(2);
     service.decrement(product.id);
     expect(map.get('L1000')).toEqual(1);
@@ -147,14 +134,14 @@ describe('ProductService', () => {
 
   });
 
-  it('getcart  should return the cart for current user',  (() =>{
+  it('getcart  should return the cart for current user', (() => {
     ProductService.products = [Product.fakePRoduct()];
-    localStorage.setItem('username', 'user')
-    let product = service.getProductWithId('L1000');
+    localStorage.setItem('username', 'user');
+    const product = service.getProductWithId('L1000');
     service.addToCart(product);
-    service.increment(product.id, product.quantity)
+    service.increment(product.id, product.quantity);
     expect(ProductService.cart.get('user').size).toEqual(1);
-    let map: Map<string, number> = ProductService.cart.get('user');
+    const map: Map<string, number> = ProductService.cart.get('user');
     expect(map.get('L1000')).toEqual(2);
     service.decrement(product.id);
     expect(map.get('L1000')).toEqual(1);
@@ -162,5 +149,5 @@ describe('ProductService', () => {
     expect(map.get('L1000')).toEqual(undefined);
   }));
 
-  
+
 });

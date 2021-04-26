@@ -18,13 +18,13 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
-  counter(i: number) {
+  counter(i: number): any {
     return new Array(i);
   }
 
-  addToCart(product: Product){
-    this.productService.addToCart(this.product)
-    this.router.navigateByUrl("cartpage")
+  addToCart(product: Product): void {
+    this.productService.addToCart(this.product);
+    this.router.navigateByUrl('cartpage');
 
   }
 

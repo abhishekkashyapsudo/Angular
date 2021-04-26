@@ -1,18 +1,19 @@
-<br/>
+<br />
 <h2 style="text-align:center;">{{'main-page.title' | translate}}</h2>
-<br/>
+<br />
 <div class="input-group col-md-4">
-  <input class="form-control py-2 border-right-0 border" [(ngModel)]="search" id="idTxt" type="text" placeholder="{{'main-page.fname' | translate}}: "/>
+  <input class="form-control py-2 border-right-0 border" [(ngModel)]="search" id="idTxt" type="text"
+    placeholder="{{'main-page.fname' | translate}}: " />
   <span class="input-group-append">
     <button class="btn btn-outline-secondary border-left-0 border" type="button">
-          <i class="fa fa-search"></i>
+      <i class="fa fa-search"></i>
     </button>
   </span>
   &nbsp;&nbsp;
 </div>
-<br/>
+<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{'main-page.fby' | translate}} {{search}}
-<br/><br/>
+<br /><br />
 <accordion [isAnimated]="true">
   <span *ngFor="let p of map | keyvalue">
     <accordion-group [isOpen]="true" #{{p.key}}>
@@ -28,23 +29,26 @@
       <div class="container">
         <div class="grayBg">
           <div class="row">
-            
-              <div *ngFor="let product of p.value" class="col-xs-12 col-sm-4">
-                <div class="productWrp">
-                  <a [routerLink]="" (click) = "viewProduct(product.id)" >
-                  <figure><img class="img-responsive" width="100" height="175" src="{{product.image}}">
-                    
-                  </figure>
-                  </a>
-                  <figcaption>
 
-                    <h4>{{product.name}}</h4>
-                    <b><p>{{product.price | currency:'INR'}}</p></b>
-                    <a [routerLink]="" (click) = "viewProduct(product.id)" class="btn btn-primary">{{'main-page.vdetail' | translate}} </a>
-                  </figcaption>
-                </div>
+            <div *ngFor="let product of p.value" class="col-xs-12 col-sm-4">
+              <div class="productWrp">
+                <a [routerLink]="" (click)="viewProduct(product.id)">
+                  <figure><img class="img-responsive" width="100" height="175" src="{{product.image}}">
+
+                  </figure>
+                </a>
+                <figcaption>
+
+                  <h4>{{product.name}}</h4>
+                  <b>
+                    <p>{{product.price | currency:'INR'}}</p>
+                  </b>
+                  <a [routerLink]="" (click)="viewProduct(product.id)" class="btn btn-primary">{{'main-page.vdetail' |
+                    translate}} </a>
+                </figcaption>
               </div>
-            
+            </div>
+
           </div>
         </div>
       </div>

@@ -15,8 +15,9 @@
                             <div class="col-md-6">
 
                                 <div class="form-group">
-                                    <input class="form-control" id="txtName" type="text" placeholder="{{'register.euname' | translate}} *"
-                                        formControlName="username" [ngClass]="{
+                                    <input class="form-control" id="txtName" type="text"
+                                        placeholder="{{'register.euname' | translate}} *" formControlName="username"
+                                        [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('username').touched || userForm.get('username').dirty) &&
                                 !userForm.get('username').valid
@@ -26,13 +27,14 @@
                                             {{'register.peuname' | translate}}
                                         </span>
                                         <span *ngIf="userForm.get('username').errors?.minlength">
-                                            {{'register.4uname' | translate}}    
+                                            {{'register.4uname' | translate}}
                                         </span>
                                     </span>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" id="password" type="password"
-                                        placeholder="{{'register.epwd' | translate}}*" formControlName="password" [ngClass]="{
+                                        placeholder="{{'register.epwd' | translate}}*" formControlName="password"
+                                        [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('password').touched || userForm.get('password').dirty) &&
                                 !userForm.get('password').valid
@@ -48,7 +50,8 @@
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" id="confirmPassword" type="password"
-                                        placeholder="{{'register.cpwd' | translate}}*" formControlName="confirmPassword" [ngClass]="{
+                                        placeholder="{{'register.cpwd' | translate}}*" formControlName="confirmPassword"
+                                        [ngClass]="{
                                     'is-invalid':
                                     (userForm.get('confirmPassword').touched || userForm.get('confirmPassword').dirty) &&
                                     !userForm.get('confirmPassword').valid
@@ -67,8 +70,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <input class="form-control" id="pin" type="pin" placeholder="{{'register.epin' | translate}} *"
-                                        formControlName="pin" [ngClass]="{
+                                    <input class="form-control" id="pin" type="pin"
+                                        placeholder="{{'register.epin' | translate}} *" formControlName="pin" [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('pin').touched || userForm.get('pin').dirty) &&
                                 !userForm.get('pin').valid
@@ -91,79 +94,86 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" id="name" type="name" placeholder="{{'register.ename' | translate}} *"
-                                        formControlName="name" [ngClass]="{
+                                    <input class="form-control" id="name" type="name"
+                                        placeholder="{{'register.ename' | translate}} *" formControlName="name"
+                                        [ngClass]="{
                                     'is-invalid':
                                     (userForm.get('name').touched || userForm.get('name').dirty) &&
                                     !userForm.get('name').valid
                                     }" />
                                     <span class="invalid-feedback">
                                         <span *ngIf="userForm.get('name').errors?.required">
-                                            {{'register.pename' | translate}}                                        </span>
+                                            {{'register.pename' | translate}} </span>
                                         <span *ngIf="userForm.get('name').errors?.minlength">
-                                            {{'register.name5' | translate}}              
+                                            {{'register.name5' | translate}}
                                         </span>
                                     </span>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="email" type="email" placeholder="{{'register.eemail' | translate}}  *"
-                                        formControlName="email" [ngClass]="{
+                                    <input class="form-control" id="email" type="email"
+                                        placeholder="{{'register.eemail' | translate}}  *" formControlName="email"
+                                        [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('email').touched || userForm.get('email').dirty) &&
                                 !userForm.get('email').valid
                                 }" />
                                     <span class="invalid-feedback">
                                         <span *ngIf="userForm.get('email').errors?.required">
-                                            {{'register.peemail' | translate}}    
+                                            {{'register.peemail' | translate}}
                                         </span>
                                         <span *ngIf="userForm.get('email').errors?.email">
-                                            {{'register.vemail' | translate}}    
+                                            {{'register.vemail' | translate}}
                                         </span>
                                     </span>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="phoneNumber" type="phoneNumber" placeholder="{{'register.epn' | translate}} *"
-                                        formControlName="phoneNumber" [ngClass]="{
+                                    <input class="form-control" id="phoneNumber" type="phoneNumber"
+                                        placeholder="{{'register.epn' | translate}} *" formControlName="phoneNumber"
+                                        [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('phoneNumber').touched || userForm.get('phoneNumber').dirty) &&
                                 !userForm.get('phoneNumber').valid
                                 }" />
                                     <span class="invalid-feedback">
                                         <span *ngIf="userForm.get('phoneNumber').errors?.required">
-                                            {{'register.pepn' | translate}}    
+                                            {{'register.pepn' | translate}}
                                         </span>
                                         <span *ngIf="userForm.get('phoneNumber').errors?.pattern">
-                                            {{'register.npn' | translate}}  
+                                            {{'register.npn' | translate}}
                                         </span>
-                                        <span *ngIf="userForm.get('phoneNumber').errors?.minlength || userForm.get('phoneNumber').errors?.maxlength">
-                                            {{'register.p10' | translate}}  
+                                        <span
+                                            *ngIf="userForm.get('phoneNumber').errors?.minlength || userForm.get('phoneNumber').errors?.maxlength">
+                                            {{'register.p10' | translate}}
                                         </span>
                                     </span>
                                 </div>
 
                                 <div class="form-group">
-                                    <input class="form-control" id="address" type="name" placeholder="{{'register.adrs' | translate}} *"
-                                    formControlName="address" [ngClass]="{
+                                    <input class="form-control" id="address" type="name"
+                                        placeholder="{{'register.adrs' | translate}} *" formControlName="address"
+                                        [ngClass]="{
                                 'is-invalid':
                                 (userForm.get('address').touched || userForm.get('address').dirty) &&
                                 !userForm.get('address').valid
                                 }" />
-                                <span class="invalid-feedback">
-                                    <span *ngIf="userForm.get('address').errors?.required">
-                                        {{'register.padrs' | translate}}  
+                                    <span class="invalid-feedback">
+                                        <span *ngIf="userForm.get('address').errors?.required">
+                                            {{'register.padrs' | translate}}
+                                        </span>
+                                        <span *ngIf="userForm.get('address').errors?.minlength">
+                                            {{'register.adrs5' | translate}}
+                                        </span>
                                     </span>
-                                    <span *ngIf="userForm.get('address').errors?.minlength">
-                                        {{'register.adrs5' | translate}}  
-                                    </span>
-                                </span>                                </div>
+                                </div>
                                 <button type="submit" (click)="redirectToLogin()" class="btnRegister"
                                     value="Cancel">{{'register.cancel' | translate}}</button>
-                                <input [disabled]="!userForm.valid" type="submit" class="btnRegister" value="{{'register.rb' | translate}}" />
+                                <input [disabled]="!userForm.valid" type="submit" class="btnRegister"
+                                    value="{{'register.rb' | translate}}" />
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>       
+            </form>
         </div>
     </div>
 </div>

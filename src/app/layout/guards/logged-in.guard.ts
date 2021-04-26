@@ -7,16 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class LoggedInGuard implements CanActivate {
 
-  constructor(private readonly router: Router){}
+  constructor(private readonly router: Router) { }
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
 
-      if(localStorage.getItem('isLoggedIn')==='Yes'){
-        this.router.navigate(['/products']);
-        return false;
-      }
-      return true;
+    if (localStorage.getItem('isLoggedIn') === 'Yes') {
+      this.router.navigate(['/products']);
+      return false;
+    }
+    return true;
   }
-  
+
 }

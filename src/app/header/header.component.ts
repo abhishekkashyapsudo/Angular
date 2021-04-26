@@ -13,27 +13,28 @@ import { UserService } from '../users/user-service.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public translate: TranslateService,  private readonly router: Router, private readonly userService: UserService) { }
+  constructor(public translate: TranslateService, private readonly router: Router, private readonly userService: UserService) { }
 
-  private user: string = "";
+  private user = '';
   ngOnInit(): void {
   }
-  
-  
-  logout(){
-  
-    localStorage.setItem('isLoggedIn','No');
-    localStorage.setItem('username',undefined);
-    this.router.navigateByUrl("login");
+
+
+  logout(): void {
+
+    localStorage.setItem('isLoggedIn', 'No');
+    localStorage.setItem('username', undefined);
+    this.router.navigateByUrl('login');
     this.userService.logoutUser();
   }
-  cartPage(){
-    this.router.navigateByUrl("cartpage");
+  cartPage(): void {
+    this.router.navigateByUrl('cartpage');
   }
-  shouldBeDisplayed(){
-    if(localStorage.getItem("username") !== undefined)
-      this.user = localStorage.getItem("username");
-    return localStorage.getItem('isLoggedIn') == 'Yes';
+  shouldBeDisplayed(): boolean {
+    if (localStorage.getItem('username') !== undefined) {
+      this.user = localStorage.getItem('username');
+    }
+    return localStorage.getItem('isLoggedIn') === 'Yes';
   }
 
 

@@ -8,63 +8,61 @@ import { ProductService } from '../products/product.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  public title: string = "";
+  public title = '';
   public total: number;
   public shipping: number;
   public tax: number;
   public gtotal: number;
-  public _cart: Map<Product, number>;
+  public ucart: Map<Product, number>;
   constructor(private readonly productService: ProductService) {
-    this._cart = new Map<Product, number>();
-    this.title = "" + localStorage.getItem('username');
+    this.ucart = new Map<Product, number>();
+    this.title = '' + localStorage.getItem('username');
   }
 
-  initCart() {
-    let map = this.productService.getCart();
+  initCart(): void {
+    const map = this.productService.getCart();
     this.cart = new Map<Product, number>();
     this.shipping = map.size * 50;
     this.total = 0;
     this.gtotal = this.shipping;
     map.forEach((value: number, key: string) => {
-      let product = this.productService.getProductWithId(key);
+      const product = this.productService.getProductWithId(key);
       this.total += product.price * value;
       this.cart.set(product, value);
     });
     this.tax = this.total * 0.18;
     this.gtotal += this.tax + this.total;
-    this.cart = this._cart;
+    this.cart = this.ucart;
   }
 
-  get cart() {
-    return this._cart;
+  get cart(): Map<Product, number> {
+    return this.ucart;
   }
   set cart(c) {
-    this._cart = c;
+    this.ucart = c;
   }
 
   ngOnInit(): void {
     this.initCart();
   }
 
-  increase(product: Product){
+  increase(product: Product): void {
     this.productService.increment(product.id, product.quantity);
     this.initCart();
   }
 
-  decrease(id: string){
+  decrease(id: string): void {
     this.productService.decrement(id);
     this.initCart();
 
 
   }
 
-  removeProduct(product: Product) {
-    
+  removeProduct(product: Product): void {
+
     this.productService.removeProduct(product.id);
     this.initCart();
   }
-
-  
 
 }
 

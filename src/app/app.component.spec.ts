@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -17,7 +17,7 @@ describe('AppComponent', () => {
         RouterModule.forRoot([]),
         ReactiveFormsModule,
         TranslateModule.forRoot()
-        
+
       ],
       declarations: [
         AppComponent
@@ -31,7 +31,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  
 
-  
+
+
 });

@@ -1,29 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">
-        <img src="assets/nagarro.png" width="130" height="33" class="d-inline-block align-top" alt="">
-        <span style="font-weight: bold;color: black;">&nbsp;{{'HEADER.TITLE' | translate}}</span>
-      </a>
-      
-      <div class="navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a [routerLink] ="['/products']" routerLinkActive='active' class="nav-link" href="#">{{'HEADER.products' | translate}} <span class="sr-only">(current)</span></a>
-          </li>
-          
-        </ul>
-      </div>  
-    <form class="form-inline">
-       <span style="color:white;">Select Language:&nbsp;</span> 
-      <select #langSelect (change)="translate.use(langSelect.value)">
-        <option *ngFor="let language of translate.getLangs()" [value]="language" [selected]="language === translate.currentLang">{{language}}</option>
-      </select>&nbsp;
-      <span *ngIf="shouldBeDisplayed()">
-        <button class="btn btn-info my-2 my-sm-0" (click)="cartPage()">{{'HEADER.cart' | translate}} <i class="fa fa-shopping-cart"></i></button>
-        &nbsp;&nbsp;<button class="btn btn-warning my-2 my-sm-0" type="button" (click)="logout()">{{'HEADER.logout' | translate}} {{user | uppercase}}</button> 
-      </span>
-    </form>  
+  <a class="navbar-brand" href="#">
+    <img src="assets/nagarro.png" width="130" height="33" class="d-inline-block align-top" alt="">
+    <span style="font-weight: bold;color: black;">&nbsp;{{'HEADER.TITLE' | translate}}</span>
+  </a>
+
+  <div class="navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a [routerLink]="['/products']" routerLinkActive='active' class="nav-link" href="#">{{'HEADER.products' |
+          translate}} <span class="sr-only">(current)</span></a>
+      </li>
+
+    </ul>
+  </div>
+  <form class="form-inline">
+    <span style="color:white;">Select Language:&nbsp;</span>
+    <select #langSelect (change)="translate.use(langSelect.value)">
+      <option *ngFor="let language of translate.getLangs()" [value]="language"
+        [selected]="language === translate.currentLang">{{language}}</option>
+    </select>&nbsp;
+    <span *ngIf="shouldBeDisplayed()">
+      <button class="btn btn-info my-2 my-sm-0" (click)="cartPage()">{{'HEADER.cart' | translate}} <i
+          class="fa fa-shopping-cart"></i></button>
+      &nbsp;&nbsp;<button class="btn btn-warning my-2 my-sm-0" type="button" (click)="logout()">{{'HEADER.logout' |
+        translate}} {{user | uppercase}}</button>
+    </span>
+  </form>
 </nav>
-
-
-
-  

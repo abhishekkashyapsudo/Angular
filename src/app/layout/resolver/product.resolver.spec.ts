@@ -9,7 +9,7 @@ describe('ProductResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ HttpClientModule, RouterTestingModule]
+      imports: [HttpClientModule, RouterTestingModule]
 
     });
     resolver = TestBed.inject(ProductResolver);

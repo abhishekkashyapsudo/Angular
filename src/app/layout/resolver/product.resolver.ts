@@ -13,7 +13,7 @@ import { ProductService } from 'src/app/products/product.service';
 })
 export class ProductResolver implements Resolve<Product> {
 
-  constructor(private readonly productService: ProductService){
+  constructor(private readonly productService: ProductService) {
 
   }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Product> {

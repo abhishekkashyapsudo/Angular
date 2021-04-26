@@ -12,12 +12,12 @@ describe('UserloginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserloginComponent ],
+      declarations: [UserloginComponent],
       imports: [ReactiveFormsModule, HttpClientModule, RouterTestingModule, TranslateModule.forRoot()]
 
-      
+
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

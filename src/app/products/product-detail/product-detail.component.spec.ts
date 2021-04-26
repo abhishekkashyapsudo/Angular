@@ -8,9 +8,9 @@ describe('ProductDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductDetailComponent ],
+      declarations: [ProductDetailComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -19,6 +19,6 @@ describe('ProductDetailComponent', () => {
     fixture.detectChanges();
   });
 
-  
+
 
 });

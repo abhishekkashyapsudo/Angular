@@ -7,13 +7,13 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  param={value:'Typescript'}
-  constructor(public translate: TranslateService){
-    translate.addLangs(['English', 'French','Hindi']);
+  param = { value: 'Typescript' };
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['English', 'French', 'Hindi']);
     translate.setDefaultLang('English');
 
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match('/English/HindiFrench/') ? browserLang :'English');
+    translate.use(browserLang.match('/English/HindiFrench/') ? browserLang : 'English');
   }
 }
 

@@ -16,24 +16,26 @@
 
                         <p> <input type="button" value="-" (click)="decrease(p.key.id)" class="minus">&nbsp;&nbsp;&nbsp;
                             {{p.value}}&nbsp;&nbsp;&nbsp;
-                        <input type="button" value="+" (click)="increase(p.key)"class="plus" [disabled] = "p.value==p.key.quantity"> x {{p.key.price | currency:"INR"}}</p>
-                        
+                            <input type="button" value="+" (click)="increase(p.key)" class="plus"
+                                [disabled]="p.value==p.key.quantity"> x {{p.key.price | currency:"INR"}}
+                        </p>
+
                         <span class="invalid-feedback">
-                            <span >
+                            <span>
                                 {{'cart.enter_username' | translate}}
                             </span>
-                            
+
                         </span>
                         <p class="stockStatus"> {{'cart.in_stock' | translate}}</p>
-                        
+
                     </div>
-                    
+
 
                     <div class="prodTotal cartSection">
                         <p>{{p.key.price * p.value | currency:"INR"}}</p>
                     </div>
                     <div class="cartSection removeWrap">
-                        <a [routerLink]="" (click) = "removeProduct(p.key)" class="remove">x</a>
+                        <a [routerLink]="" (click)="removeProduct(p.key)" class="remove">x</a>
                     </div>
                 </div>
             </li>
@@ -47,16 +49,20 @@
         <br />
         <br />
         <br />
-        <div class="totalRow"><span class="label">{{'cart.subtotal' | translate}}</span><span class="value">{{total | currency:"INR"}}</span>
+        <div class="totalRow"><span class="label">{{'cart.subtotal' | translate}}</span><span class="value">{{total |
+                currency:"INR"}}</span>
         </div>
 
         <div class="totalRow"><span class="label">{{'cart.shipping' | translate}}</span><span class="value">{{shipping |
                 currency:"INR"}}</span></div>
 
-        <div class="totalRow"><span class="label">{{'cart.tax' | translate}}</span><span class="value">{{tax | currency:"INR"}}</span></div>
-        <div class="totalRow final"><span class="label">{{'cart.total' | translate}}</span><span class="value">{{gtotal |
+        <div class="totalRow"><span class="label">{{'cart.tax' | translate}}</span><span class="value">{{tax |
                 currency:"INR"}}</span></div>
-        <div class="totalRow"><a [routerLink]="['/checkout']" class="btn continue">{{'cart.checkout' | translate}}</a></div>
+        <div class="totalRow final"><span class="label">{{'cart.total' | translate}}</span><span class="value">{{gtotal
+                |
+                currency:"INR"}}</span></div>
+        <div class="totalRow"><a [routerLink]="['/checkout']" class="btn continue">{{'cart.checkout' | translate}}</a>
+        </div>
 
     </div>
 </div>
