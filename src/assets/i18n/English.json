@@ -2,7 +2,7 @@
     "HEADER":{
         "TITLE": "Nagarro Ecommerce",
         "products": "Products",
-        "cart": "Products",
+        "cart": "Cart",
         "logout": "Logout"
     },
     "footer":{
