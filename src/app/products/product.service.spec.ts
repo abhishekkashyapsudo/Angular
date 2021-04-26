@@ -8,6 +8,10 @@ describe('ProductService', () => {
   let service: ProductService;
 
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [ProductService]
+    });
     service = TestBed.inject(ProductService);
     localStorage.setItem('username', 'user');
 
@@ -139,7 +143,7 @@ describe('ProductService', () => {
     localStorage.setItem('username', 'user');
     const product = service.getProductWithId('L1000');
     service.addToCart(product);
-    service.increment(product.id, product.quantity);
+    service.increment(product.id, product.quantity)
     expect(ProductService.cart.get('user').size).toEqual(1);
     const map: Map<string, number> = ProductService.cart.get('user');
     expect(map.get('L1000')).toEqual(2);
